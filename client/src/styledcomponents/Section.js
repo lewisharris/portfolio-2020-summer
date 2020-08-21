@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Section = styled.div`
-  width: 100vw;
-  margin: 0px 10vw;
-  min-height: 100vh;
+  width: 80vw;
+  margin: 0px auto;
+  max-width: 1440px;
 `;
 
 export default Section;

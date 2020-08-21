@@ -8,7 +8,6 @@ import Footer from "./styledcomponents/PageFooter";
 function App() {
   return (
     <div className="App">
-      <h1>Portfolio</h1>
       <LandingPage />
       <ProjectsPage />
       <ContactPage />

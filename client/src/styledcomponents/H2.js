@@ -5,7 +5,7 @@ const H2 = styled.h2`
   font-size: 80px;
   font-weight: 900;
   margin: 10px;
-  margin-left: -50px;
+  margin-left:-5vw;
   padding: 0px;
 `;
 

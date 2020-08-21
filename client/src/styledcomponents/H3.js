@@ -6,7 +6,7 @@ const H3 = styled.h3`
   font-weight: 300;
   font-style: italic;
   margin: 5px;
-  margin-left: 0px;
+  margin-left:0px;
   padding: 0px;
   max-width: 500px;
 `;
