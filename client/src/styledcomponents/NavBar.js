@@ -4,13 +4,18 @@ import Logo from "../images/icons/logo-main.png";
 import DarkMode from "./DarkMode";
 
 const Nav = styled.nav`
-  width: 100vw;
+  width: 100%;
   margin: 0px auto;
   max-width: 1440px;
   position: fixed;
   top: 0px;
   height: 60px;
-  background: white;
+  background: rgb(227, 33, 33);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 255) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
 `;
 const Ul = styled.ul`
   display: flex;
@@ -25,6 +30,9 @@ const Li = styled.li`
   list-style-type: none;
   cursor: pointer;
   font-size: 18px;
+  :hover {
+    color: #ec6d69;
+  }
 `;
 const Img = styled.img`
   width: 60px;

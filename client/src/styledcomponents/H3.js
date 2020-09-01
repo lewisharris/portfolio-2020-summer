@@ -5,8 +5,8 @@ const H3 = styled.h3`
   font-size: 36px;
   font-weight: 300;
   font-style: italic;
-  margin: 5px;
-  margin-left:0px;
+  margin: 10px;
+  margin-left: 0px;
   padding: 0px;
   max-width: 500px;
 `;
