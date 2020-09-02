@@ -2,7 +2,6 @@ import React from "react";
 import H1 from "./styledcomponents/H1";
 import H3 from "./styledcomponents/H3";
 import H4 from "./styledcomponents/H4";
-import NavBar from "./styledcomponents/NavBar";
 import Button from "./styledcomponents/Button";
 import Section from "./styledcomponents/Section";
 import ParticlesContainer from "./ParticlesContainer";
@@ -19,7 +18,6 @@ const LandingPage = () => {
   return (
     <div style={landingStyle}>
       <ParticlesContainer />
-      <NavBar />
       <Section>
         <H1>Lewis Harris</H1>
         <H3>Full Stack Developer</H3>

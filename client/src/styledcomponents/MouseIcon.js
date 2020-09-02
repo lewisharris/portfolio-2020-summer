@@ -21,7 +21,7 @@ const Wheel = styled.div`
   left: 50%;
   transform: translateX(-50%);
   border-radius: 500px;
-  animation: bounce 0.5s ease-in 500ms infinite forwards;
+  animation: bounce 0.8s ease-in 500ms infinite forwards;
   @keyframes bounce {
     0% {
       top: 10px;

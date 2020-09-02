@@ -71,7 +71,7 @@ const ParticlesContainer = () => {
             },
             move: {
               enable: true,
-              speed: 3.1565905665290903,
+              speed: 2.1565905665290903,
               direction: "top",
               random: true,
               straight: false,
@@ -105,9 +105,9 @@ const ParticlesContainer = () => {
                 }
               },
               bubble: {
-                distance: 100,
-                size: 4,
-                duration: 1.1988011988011988,
+                distance: 200,
+                size: 200,
+                duration: 3,
                 opacity: 8,
                 speed: 2
               },
@@ -225,8 +225,8 @@ const ParticlesContainer = () => {
                 }
               },
               bubble: {
-                distance: 100,
-                size: 4,
+                distance: 300,
+                size: 10,
                 duration: 1.1988011988011988,
                 opacity: 8,
                 speed: 2

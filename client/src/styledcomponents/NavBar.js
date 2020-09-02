@@ -4,23 +4,20 @@ import Logo from "../images/icons/logo-main.png";
 import DarkMode from "./DarkMode";
 
 const Nav = styled.nav`
-  width: 100%;
+  width: 100vw;
   margin: 0px auto;
-  max-width: 1440px;
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   height: 60px;
-  background: rgb(227, 33, 33);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 255) 80%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  z-index: 3;
 `;
 const Ul = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   position: fixed;
   top: 0px;
   right: 15vw;
@@ -47,10 +44,10 @@ const NavBar = () => {
     <Nav>
       <Img src={Logo} alt={"main-logo"}></Img>
       <Ul>
+        <DarkMode />
         <Li>Projects</Li>
         <Li>Contact</Li>
       </Ul>
-      <DarkMode />
     </Nav>
   );
 };
