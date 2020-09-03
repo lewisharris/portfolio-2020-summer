@@ -6,7 +6,13 @@ const H3 = styled.h3`
   font-weight: 300;
   font-style: italic;
   margin: 10px;
-  margin-left: 0px;
+  margin-left: ${props => {
+    if (props.indended) {
+      return "10vw";
+    } else {
+      return "0px";
+    }
+  }};
   padding: 0px;
   max-width: 500px;
 `;

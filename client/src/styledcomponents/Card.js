@@ -32,7 +32,7 @@ const ButtonFlexBox = styled.div`
 
 const LanguagesText = styled.p`
   font-style: italic;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
   padding: 0px;
   margin: 5px 0px;
@@ -44,9 +44,10 @@ const H3 = styled.h3`
 `;
 
 const MainText = styled.p`
-  margin: 10px 0px;
+  margin: 10px auto;
   font-size: 14px;
   font-weight: 300;
+  max-width: 700px;
 `;
 
 const Img = styled.img`

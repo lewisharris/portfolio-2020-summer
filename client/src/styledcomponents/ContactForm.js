@@ -5,7 +5,7 @@ import Linkedin from "../images/icons/linkedin-icon.png";
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  max-width: 400px;
   min-width: 300px;
 `;
 const Label = styled.label`
