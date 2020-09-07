@@ -20,8 +20,7 @@ const LandingPage = () => {
       <ParticlesContainer />
       <Section>
         <H1>Lewis Harris</H1>
-        <H3>Full Stack Developer</H3>
-        <H4>London, UK</H4>
+        <H3 light>Full Stack Developer</H3>
         <Button>Explore Projects</Button>
       </Section>
       <MouseIcon />

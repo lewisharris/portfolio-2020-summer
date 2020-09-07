@@ -3,28 +3,61 @@ import React from "react";
 
 const Footer = styled.footer`
   background: #ec706e;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3vw;
 `;
+
+const LinkContainer = styled.div`
+  margin: 0px auto;
+`;
+
+const Ul = styled.ul`
+  list-style-type: none;
+  padding: 0px 20px;
+  margin: 0px;
+  margin-bottom: 20px;
+`;
+
+const H4 = styled.h4`
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+`;
+
+const Li = styled.li`
+  color: white;
+  padding: 5px 0px;
+  margin: 0px;
+  font-weight: 300;
+  font-size: 10px;
+  :hover {
+    cursor: pointer;
+    color: red;
+  }
+`;
+
 const PageFooter = () => {
   return (
     <Footer>
-      <footer>
-        <div>
-          <h4>Links</h4>
-          <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Links</h4>
-          <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-          </ul>
-        </div>
-      </footer>
+      <LinkContainer>
+        <H4>Site</H4>
+        <Ul>
+          <Li>Projects</Li>
+          <Li>About Me</Li>
+          <Li>Contact</Li>
+        </Ul>
+      </LinkContainer>
+      <LinkContainer>
+        <H4>Social</H4>
+        <Ul>
+          <Li>LinkedIn</Li>
+          <Li>Medium</Li>
+          <Li>Dribbble</Li>
+          <Li>GitHub</Li>
+        </Ul>
+      </LinkContainer>
     </Footer>
   );
 };

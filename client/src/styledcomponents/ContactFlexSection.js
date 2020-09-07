@@ -12,6 +12,9 @@ const Image = styled.img`
   vertical-align: middle;
   height: 70px;
   margin: 10px 10px 50px 10px;
+  :hover {
+    cursor: pointer;
+  }
 `;
 const Caption = styled.div`
   display: flex;
@@ -21,6 +24,9 @@ const Caption = styled.div`
 const H5 = styled.h5`
   margin: 0px;
   margin-bottom: 5px;
+  :hover {
+    cursor: pointer;
+  }
 `;
 const P = styled.p`
   margin: 0px;

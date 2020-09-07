@@ -19,6 +19,11 @@ const Input = styled.input`
   border: none;
   margin: 10px 0px;
   padding: 0px 10px;
+  box-shadow: inset 0px 0px 0px #f5e5e5;
+  transition: all 0.5s ease-in-out;
+  :focus {
+    box-shadow: inset 400px 0px 0px #f5e5e5;
+  }
 `;
 const Button = styled.button`
   height: 50px;
@@ -27,8 +32,10 @@ const Button = styled.button`
   border: none;
   font-size: 17px;
   cursor: pointer;
+  box-shadow: inset 0px 0px 0px #ff5c59;
+  transition: all 0.5s ease-in-out;
   :hover {
-    background: #ff5c59;
+    box-shadow: inset 400px 0px 0px #ff5c59;
   }
 `;
 
@@ -54,7 +61,13 @@ const ContactForm = () => {
       <Input type="text"></Input>
       <Label>Message*</Label>
       <Input message={true} type="text"></Input>
-      <Button>Send</Button>
+      <Button
+        onClick={event => {
+          event.preventDefault();
+        }}
+      >
+        Send
+      </Button>
       <P>or</P>
       <Img src={Linkedin} alt="linkedin-logo"></Img>
     </Form>

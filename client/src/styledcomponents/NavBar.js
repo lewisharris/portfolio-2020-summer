@@ -3,6 +3,14 @@ import styled from "styled-components";
 import Logo from "../images/icons/logo-main.png";
 import DarkMode from "./DarkMode";
 
+const getWindowSize = () => {
+  const windowWidth = window.innerWidth;
+  return windowWidth;
+};
+
+window.addEventListener("resize", getWindowSize);
+getWindowSize();
+
 const Nav = styled.nav`
   width: 100vw;
   margin: 0px auto;
@@ -15,7 +23,7 @@ const Nav = styled.nav`
 `;
 const Ul = styled.ul`
   display: flex;
-  flex-direction: row;
+  flex-direction: "row";
   justify-content: flex-end;
   align-items: center;
   position: fixed;
@@ -25,6 +33,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   padding-left: 30px;
   list-style-type: none;
+  color: #cecece;
   cursor: pointer;
   font-size: 18px;
   :hover {
@@ -36,7 +45,7 @@ const Img = styled.img`
   vertical-align: middle;
   position: fixed;
   top: 0px;
-  left: 15vw;
+  left: 10vw;
 `;
 
 const NavBar = () => {
@@ -46,6 +55,7 @@ const NavBar = () => {
       <Ul>
         <DarkMode />
         <Li>Projects</Li>
+        <Li>About</Li>
         <Li>Contact</Li>
       </Ul>
     </Nav>

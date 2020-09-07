@@ -11,7 +11,7 @@ const Button = styled.button`
   border-radius: 500px;
   color: #252525;
   background: none;
-  margin-right: 75px;
+  margin: 0px auto;
   :hover {
     cursor: pointer;
     border-color: #409cbe;
@@ -32,14 +32,14 @@ const IconContainer = styled.div`
 `;
 const IconSegment = styled.div`
   width: ${props => {
-    if (props.displayType === "Grid") {
+    if (props.displayType === "List") {
       return "8px";
     } else {
       return "18px";
     }
   }};
   height: ${props => {
-    if (props.displayType === "Grid") {
+    if (props.displayType === "List") {
       return "8px";
     } else {
       return "3px";
@@ -50,6 +50,13 @@ const IconSegment = styled.div`
 `;
 
 class ToggleGallery extends React.Component {
+  returnText = () => {
+    if (this.props.displayType === "Grid") {
+      return "List";
+    } else {
+      return "Grid";
+    }
+  };
   render() {
     return (
       <Button
@@ -64,7 +71,7 @@ class ToggleGallery extends React.Component {
           <IconSegment displayType={this.props.displayType} />
           <IconSegment displayType={this.props.displayType} />
         </IconContainer>
-        <P>{this.props.displayType} View</P>
+        <P>{this.returnText()} View</P>
       </Button>
     );
   }

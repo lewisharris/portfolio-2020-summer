@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import ToggleGallery from "./ToggleGallery";
 import CardContainer from "./CardContainer";
+import { A, ABold } from "./A";
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -26,9 +26,11 @@ class Gallery extends React.Component {
       flexDirection: "column",
       alignItems: "center",
       background: "#fafafa",
-      padding: "20px",
+      padding: "2vw",
       borderRadius: "20px",
-      marginTop: "80px"
+      margin: "0px auto",
+      marginTop: "80px",
+      boxSizing: "border-box"
     };
     return (
       <div style={galleryStyle}>
@@ -37,6 +39,10 @@ class Gallery extends React.Component {
           displayType={this.state.displayType}
         />
         <CardContainer displayType={this.state.displayType} />
+
+        <A target="#" href="https://www.github.com/lewisharris">
+          Full list of projects available on <ABold>GitHub</ABold>
+        </A>
       </div>
     );
   }

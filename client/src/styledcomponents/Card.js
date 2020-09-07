@@ -4,13 +4,6 @@ import CardButton from "./CardButton";
 import pushFIT from "../images/pushfit-mockup.jpg";
 
 const Container = styled.div`
-  width: ${props => {
-    if (props.displayType === "Grid") {
-      return "300px";
-    } else {
-      return "100%";
-    }
-  }};
   border-radius: 30px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
   margin: 10px;
@@ -52,7 +45,7 @@ const MainText = styled.p`
 
 const Img = styled.img`
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 10px auto;
 `;
 
@@ -60,8 +53,11 @@ const Card = props => {
   return (
     <Container displayType={props.displayType}>
       <H3>Header</H3>
-      <LanguagesText>HTML, CSS, React, Sass, NodeJS</LanguagesText>
-      <Img src={pushFIT} alt="image"></Img>
+      <LanguagesText>HTML, CSS, React, Redux, NodeJS</LanguagesText>
+      {props.displayType === "Grid" ? (
+        <Img src={pushFIT} alt="image"></Img>
+      ) : null}
+
       <MainText>
         According to Google, “A floating action button (FAB) performs the
         primary, or most common, action on a screen. It appears in front of all

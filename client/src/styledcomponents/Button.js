@@ -4,15 +4,15 @@ const Button = styled.button`
   border: none;
   padding: 5px 0px;
   background: none;
-  color: #409cbe;
+  color: #eb706e;
   font-size: 18px;
   font-weight: 600;
   margin: 0px;
-  border-bottom: 2px solid #409cbe;
+  border-bottom: 2px solid #eb706e;
   :hover {
-    color: #ec6d69;
+    color: #ff5c59;
     cursor: pointer;
-    border-bottom: 2px solid #ec6d69;
+    border-bottom: 2px solid #ff5c59;
   }
 `;
 

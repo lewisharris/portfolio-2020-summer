@@ -5,6 +5,7 @@ import ProjectsPage from "./ProjectsPage";
 import ContactPage from "./ContactPage";
 import Footer from "./styledcomponents/PageFooter";
 import NavBar from "./styledcomponents/NavBar";
+import AboutMePage from "./AboutMePage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <LandingPage />
       <ProjectsPage />
+      <AboutMePage dark="true" />
       <ContactPage />
       <Footer />
     </div>

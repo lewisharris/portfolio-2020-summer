@@ -19,18 +19,29 @@ const Span = styled.span`
   font-size: 18px;
 `;
 
-const GitHubInfo = () => {
-  return (
-    <Container>
-      <P>This Week </P>
-      <P>
-        32<Span> Pull Requests</Span>
-      </P>
-      <P>
-        26<Span> Commits</Span>
-      </P>
-    </Container>
-  );
-};
+class GitHubInfo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pullRequests: 0,
+      commits: 0
+    };
+  }
+  render() {
+    return (
+      <Container>
+        <P>This Week </P>
+        <P>
+          {this.state.pullRequests}
+          <Span> Pull Requests</Span>
+        </P>
+        <P>
+          {this.state.commits}
+          <Span> Commits</Span>
+        </P>
+      </Container>
+    );
+  }
+}
 
 export default GitHubInfo;
