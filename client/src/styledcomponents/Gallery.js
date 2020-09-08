@@ -27,7 +27,6 @@ class Gallery extends React.Component {
       alignItems: "center",
       background: "#fafafa",
       padding: "2vw",
-      borderRadius: "20px",
       margin: "0px auto",
       marginTop: "80px",
       boxSizing: "border-box"

@@ -20,11 +20,11 @@ const ProjectsPage = () => {
   });
   return (
     <Section>
-      <GitHubInfo />
       <H2 ref={headerRef} className="header">
-        Projects
+        Projects.
       </H2>
       <H3>Some of my most recent projects using a range of technologies.</H3>
+      <GitHubInfo />
       <Gallery />
     </Section>
   );

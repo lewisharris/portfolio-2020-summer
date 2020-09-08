@@ -2,20 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../images/icons/logo-main.png";
 import DarkMode from "./DarkMode";
-
-const getWindowSize = () => {
-  const windowWidth = window.innerWidth;
-  return windowWidth;
-};
-
-window.addEventListener("resize", getWindowSize);
-getWindowSize();
+import Hamburger from "./Hamburger";
 
 const Nav = styled.nav`
   width: 100vw;
   margin: 0px auto;
-  position: absolute;
-  top: 50px;
+  position: relative;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   height: 60px;
@@ -27,7 +20,7 @@ const Ul = styled.ul`
   justify-content: flex-end;
   align-items: center;
   position: fixed;
-  top: 0px;
+  top: 50px;
   right: 15vw;
 `;
 const Li = styled.li`
@@ -44,22 +37,50 @@ const Img = styled.img`
   width: 60px;
   vertical-align: middle;
   position: fixed;
-  top: 0px;
+  top: 50px;
   left: 10vw;
 `;
 
-const NavBar = () => {
-  return (
-    <Nav>
-      <Img src={Logo} alt={"main-logo"}></Img>
-      <Ul>
-        <DarkMode />
-        <Li>Projects</Li>
-        <Li>About</Li>
-        <Li>Contact</Li>
-      </Ul>
-    </Nav>
-  );
-};
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pullRequests: 0,
+      commits: 0,
+      WindowSize: null
+    };
+  }
+
+  getWindowSize = () => {
+    const windowWidth = window.innerWidth;
+    this.setState({ windowSize: windowWidth });
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.getWindowSize);
+    this.getWindowSize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.getWindowSize);
+  }
+  render() {
+    return (
+      <Nav>
+        <Img src={Logo} alt={"main-logo"}></Img>
+        {this.state.windowSize > 575 ? (
+          <Ul>
+            <DarkMode />
+            <Li>Projects</Li>
+            <Li>About</Li>
+            <Li>Contact</Li>
+          </Ul>
+        ) : (
+          <Hamburger />
+        )}
+      </Nav>
+    );
+  }
+}
 
 export default NavBar;

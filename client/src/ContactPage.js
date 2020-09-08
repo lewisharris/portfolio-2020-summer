@@ -14,7 +14,7 @@ import Dribbble from "./images/icons/dribbble-icon.svg";
 const ContactPage = () => {
   return (
     <Section>
-      <H2>Contact</H2>
+      <H2>Contact.</H2>
       <H3>Looking to work with me or just want to get in touch?</H3>
       <ContactFlexContainer>
         <ContactFlexBox>

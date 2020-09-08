@@ -32,7 +32,7 @@ const Circle = styled.div`
   border-radius: 50px;
   box-sizing: border-box;
   :hover {
-    background: #409cbe;
+    background: #ec6d69;
   }
 `;
 

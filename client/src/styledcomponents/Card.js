@@ -4,7 +4,6 @@ import CardButton from "./CardButton";
 import pushFIT from "../images/pushfit-mockup.jpg";
 
 const Container = styled.div`
-  border-radius: 30px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
   margin: 10px;
   display: flex;

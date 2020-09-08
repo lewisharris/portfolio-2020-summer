@@ -7,6 +7,7 @@ const Footer = styled.footer`
   flex-direction: row;
   flex-wrap: wrap;
   padding: 3vw;
+  position: relative;
 `;
 
 const LinkContainer = styled.div`
@@ -38,6 +39,16 @@ const Li = styled.li`
   }
 `;
 
+const P = styled.p`
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: white;
+  font-weight: 300;
+`;
+
 const PageFooter = () => {
   return (
     <Footer>
@@ -58,6 +69,7 @@ const PageFooter = () => {
           <Li>GitHub</Li>
         </Ul>
       </LinkContainer>
+      <P>Lewis Harris 2020</P>
     </Footer>
   );
 };

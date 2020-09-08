@@ -3,10 +3,25 @@ import styled from "styled-components";
 
 const Container = styled.div`
   text-align: right;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin-top: 30px;
+  position: ${props => {
+    if (props.windowSize > 500) {
+      return "absolute";
+    }
+    return "auto";
+  }};
+  top: ${props => {
+    if (props.windowSize > 500) {
+      return "0px";
+    }
+    return "auto";
+  }};
+  right: ${props => {
+    if (props.windowSize > 500) {
+      return "0px";
+    }
+    return "auto";
+  }};
+  margin: 30px 20px 0px 0px;
 `;
 const P = styled.p`
   font-weight: 900;
@@ -24,8 +39,23 @@ class GitHubInfo extends React.Component {
     super(props);
     this.state = {
       pullRequests: 0,
-      commits: 0
+      commits: 0,
+      WindowSize: null
     };
+  }
+
+  getWindowSize = () => {
+    const windowWidth = window.innerWidth;
+    this.setState({ windowSize: windowWidth });
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.getWindowSize);
+    this.getWindowSize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.getWindowSize);
   }
   render() {
     return (
