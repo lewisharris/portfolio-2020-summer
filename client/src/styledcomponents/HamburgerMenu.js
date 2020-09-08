@@ -86,13 +86,13 @@ class HamburgerMenu extends React.Component {
       <Menu>
         <Icon regular src={Logo} alt={"logo"} />
         <UL>
-          <Li>
+          <Li onClick={this.props.toggle}>
             <a href="#projects">Projects</a>
           </Li>
-          <Li>
+          <Li onClick={this.props.toggle}>
             <a href="#about">About</a>
           </Li>
-          <Li>
+          <Li onClick={this.props.toggle}>
             <a href="#contact">Contact</a>
           </Li>
           <Li
@@ -104,7 +104,7 @@ class HamburgerMenu extends React.Component {
           </Li>
           {this.state.collapsed === false ? (
             <UL>
-              <Li>
+              <Li onClick={this.props.toggle}>
                 <Img src={LinkedIn} alt="linkedin"></Img>
                 <a
                   href="https://www.linkedin.com/in/lewis-harris/"
@@ -113,19 +113,19 @@ class HamburgerMenu extends React.Component {
                   Linkedin
                 </a>
               </Li>
-              <Li>
+              <Li onClick={this.props.toggle}>
                 <Img src={GitHub} alt="github"></Img>
                 <a href="https://www.github.com/lewisharris" target="blank">
                   Github
                 </a>
               </Li>
-              <Li>
+              <Li onClick={this.props.toggle}>
                 <Img src={Medium} alt="medium"></Img>
                 <a href="https://medium.com/@lewisdanielharris" target="blank">
                   Medium
                 </a>
               </Li>
-              <Li>
+              <Li onClick={this.props.toggle}>
                 <Img src={Dribbble} alt="dribble"></Img>
                 <a href="https://dribbble.com/lewisharris" target="blank">
                   Dribbble

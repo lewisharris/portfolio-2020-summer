@@ -35,7 +35,7 @@ const Li = styled.li`
   font-size: 10px;
   :hover {
     cursor: pointer;
-    color: red;
+    font-weight: 500;
   }
 `;
 

@@ -48,12 +48,11 @@ const Wheel = styled.div`
   @keyframes bounce {
     0% {
       top: 10px;
-    }
-    50% {
-      top: 15px;
+      opacity: 1;
     }
     100% {
-      top: 10px;
+      top: 15px;
+      opacity: 0;
     }
   }
 `;
@@ -70,16 +69,18 @@ class MouseIcon extends React.Component {
   };
   render() {
     return (
-      <MouseBorder
-        onClick={() => {
-          console.log("projects");
-        }}
-      >
-        <P>Scroll</P>
-        <Mouse>
-          <Wheel></Wheel>
-        </Mouse>
-      </MouseBorder>
+      <a href="#projects">
+        <MouseBorder
+          onClick={() => {
+            console.log("projects");
+          }}
+        >
+          <P>Scroll</P>
+          <Mouse>
+            <Wheel></Wheel>
+          </Mouse>
+        </MouseBorder>
+      </a>
     );
   }
 }

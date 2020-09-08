@@ -50,30 +50,45 @@ const Img = styled.img`
   margin: 0px auto;
 `;
 
-const ContactForm = () => {
-  return (
-    <Form>
-      <Label>Name*</Label>
-      <Input type="text"></Input>
-      <Label>Email Address*</Label>
-      <Input type="text"></Input>
-      <Label>Contact Number (optional)</Label>
-      <Input type="text"></Input>
-      <Label>Message*</Label>
-      <Input message={true} type="text"></Input>
-      <Button
-        onClick={event => {
-          event.preventDefault();
-        }}
-      >
-        Send
-      </Button>
-      <P>or</P>
-      <a href="https://www.linkedin.com/in/lewis-harris/" target="blank">
-        <Img src={Linkedin} alt="linkedin-logo"></Img>
-      </a>
-    </Form>
-  );
-};
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      number: "",
+      message: "",
+      submitButton: "Send"
+    };
+  }
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({ formText: "Sent!" });
+  };
+
+  handleInput = () => {};
+
+  render() {
+    return (
+      <Form>
+        <Label>Name*</Label>
+        <Input type="text" onChange={this.handleInput()}></Input>
+        <Label>Email Address*</Label>
+        <Input type="email" onChange={this.handleInput()}></Input>
+        <Label>Contact Number (optional)</Label>
+        <Input type="text" onChange={this.handleInput()}></Input>
+        <Label>Message*</Label>
+        <Input message={true} type="text" onChange={this.handleInput()}></Input>
+        <Button onClick={event => this.handleSubmit(event)}>
+          {this.state.submitButton}
+        </Button>
+        <P>or</P>
+        <a href="https://www.linkedin.com/in/lewis-harris/" target="blank">
+          <Img src={Linkedin} alt="linkedin-logo"></Img>
+        </a>
+      </Form>
+    );
+  }
+}
 
 export default ContactForm;

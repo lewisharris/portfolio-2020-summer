@@ -11,7 +11,6 @@ class Hamburger extends React.Component {
 
   toggleMenu = () => {
     this.setState({ visible: !this.state.visible });
-    console.log(this.state.visible);
   };
 
   render() {
