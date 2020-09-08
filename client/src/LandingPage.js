@@ -30,7 +30,9 @@ const LandingPage = () => {
         <Section>
           <H1>Lewis Harris</H1>
           <H3 light>Full Stack Developer</H3>
-          <Button>Explore Projects</Button>
+          <Button>
+            <a href="#projects">Explore Projects</a>
+          </Button>
         </Section>
         <MouseIcon />
       </div>

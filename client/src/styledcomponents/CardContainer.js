@@ -18,12 +18,6 @@ const CardContainer = props => {
   const ProjectsList = require("./ProjectsList.js");
   const list = ProjectsList.List;
 
-  console.log(
-    list.map(item => {
-      return item.name;
-    })
-  );
-
   return (
     <Container displayType={props.displayType}>
       <Card displayType={props.displayType} />

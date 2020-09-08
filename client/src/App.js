@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./app.css";
 import LandingPage from "./LandingPage";
 import ProjectsPage from "./ProjectsPage";
@@ -8,6 +8,8 @@ import NavBar from "./styledcomponents/NavBar";
 import AboutMePage from "./AboutMePage";
 import ParticlesContainer from "./ParticlesContainer";
 import SplashPage from "./SplashPage";
+
+import { Element } from "react-scroll";
 
 class App extends React.Component {
   constructor(props) {
@@ -37,8 +39,8 @@ class App extends React.Component {
             <NavBar />
             <LandingPage />
             <ProjectsPage />
-            <AboutMePage dark="true" />
-            <ContactPage />
+            <AboutMePage dark="true" id="about" />
+            <ContactPage id="contact" />
             <Footer />
           </>
         )}

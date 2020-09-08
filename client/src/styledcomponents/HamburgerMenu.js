@@ -5,6 +5,7 @@ import Medium from "../images/icons/medium-icon.png";
 import Dribbble from "../images/icons/dribbble-icon.svg";
 import LinkedIn from "../images/icons/linkedin-icon.png";
 import Logo from "../images/icons/logo-main.png";
+import Xicon from "../images/icons/X.svg";
 
 const Menu = styled.div`
   width: 70vw;
@@ -36,7 +37,7 @@ const Li = styled.li`
   width: 100%;
 
   :hover {
-    color: rgba(0, 255, 255, 0.3);
+    color: #409cbe;
   }
 `;
 
@@ -56,7 +57,7 @@ const Icon = styled.img`
 `;
 
 const LiCircle = styled(Li)`
-  background: rgba(0, 255, 255, 0.3);
+  background: #409cbe;
   width: 30px;
   text-align: center;
   height: 30px;
@@ -85,9 +86,15 @@ class HamburgerMenu extends React.Component {
       <Menu>
         <Icon regular src={Logo} alt={"logo"} />
         <UL>
-          <Li>Projects</Li>
-          <Li>About</Li>
-          <Li>Contact</Li>
+          <Li>
+            <a href="#projects">Projects</a>
+          </Li>
+          <Li>
+            <a href="#about">About</a>
+          </Li>
+          <Li>
+            <a href="#contact">Contact</a>
+          </Li>
           <Li
             onClick={() => {
               this.toggleSocial();
@@ -98,22 +105,39 @@ class HamburgerMenu extends React.Component {
           {this.state.collapsed === false ? (
             <UL>
               <Li>
-                <Img src={LinkedIn} alt="linkedin"></Img>LinkedIn
+                <Img src={LinkedIn} alt="linkedin"></Img>
+                <a
+                  href="https://www.linkedin.com/in/lewis-harris/"
+                  target="blank"
+                >
+                  Linkedin
+                </a>
               </Li>
               <Li>
-                <Img src={GitHub} alt="github"></Img>Github
+                <Img src={GitHub} alt="github"></Img>
+                <a href="https://www.github.com/lewisharris" target="blank">
+                  Github
+                </a>
               </Li>
               <Li>
-                <Img src={Medium} alt="medium"></Img>Medium
+                <Img src={Medium} alt="medium"></Img>
+                <a href="https://medium.com/@lewisdanielharris" target="blank">
+                  Medium
+                </a>
               </Li>
               <Li>
-                <Img src={Dribbble} alt="dribble"></Img>Dribbble
+                <Img src={Dribbble} alt="dribble"></Img>
+                <a href="https://dribbble.com/lewisharris" target="blank">
+                  Dribbble
+                </a>
               </Li>
             </UL>
           ) : null}
 
           <Li underlined>Digital Resume</Li>
-          <LiCircle onClick={this.props.toggle}>X</LiCircle>
+          <LiCircle onClick={this.props.toggle}>
+            <img src={Xicon} alt="X"></img>
+          </LiCircle>
         </UL>
       </Menu>
     );

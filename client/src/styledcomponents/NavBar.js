@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "../images/icons/logo-main.png";
 import DarkMode from "./DarkMode";
 import Hamburger from "./Hamburger";
+import Scroll from "react-scroll";
 
 const Nav = styled.nav`
   width: 100vw;
@@ -41,6 +42,8 @@ const Img = styled.img`
   left: 10vw;
 `;
 
+const ScrollLink = Scroll.ScrollLink;
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -71,9 +74,15 @@ class NavBar extends React.Component {
         {this.state.windowSize > 575 ? (
           <Ul>
             <DarkMode />
-            <Li>Projects</Li>
-            <Li>About</Li>
-            <Li>Contact</Li>
+            <Li>
+              <a href="#projects">Projects</a>
+            </Li>
+            <Li>
+              <a href="#about">About</a>
+            </Li>
+            <Li href="#contact">
+              <a href="#contact">Contact</a>
+            </Li>
           </Ul>
         ) : (
           <Hamburger />

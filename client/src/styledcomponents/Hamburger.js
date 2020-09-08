@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import React from "react";
 import HamburgerIcon from "./HamburgerIcon";
 import Overlay from "./Overlay";

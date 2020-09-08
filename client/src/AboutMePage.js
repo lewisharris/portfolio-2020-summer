@@ -50,7 +50,7 @@ const SkillsContainer = styled.div`
 
 const AboutMePage = () => {
   return (
-    <AboutMe>
+    <AboutMe id="about">
       <Section>
         <H2>About.</H2>
         <H3 light>

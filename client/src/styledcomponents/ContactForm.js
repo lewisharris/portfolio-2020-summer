@@ -69,7 +69,9 @@ const ContactForm = () => {
         Send
       </Button>
       <P>or</P>
-      <Img src={Linkedin} alt="linkedin-logo"></Img>
+      <a href="https://www.linkedin.com/in/lewis-harris/" target="blank">
+        <Img src={Linkedin} alt="linkedin-logo"></Img>
+      </a>
     </Form>
   );
 };

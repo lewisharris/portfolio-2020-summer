@@ -55,18 +55,40 @@ const PageFooter = () => {
       <LinkContainer>
         <H4>Site</H4>
         <Ul>
-          <Li>Projects</Li>
-          <Li>About Me</Li>
-          <Li>Contact</Li>
+          <Li>
+            <a href="#projects">Projects</a>
+          </Li>
+          <Li>
+            <a href="#about">About Me</a>
+          </Li>
+          <Li>
+            <a href="#contact">Contact</a>
+          </Li>
         </Ul>
       </LinkContainer>
       <LinkContainer>
         <H4>Social</H4>
         <Ul>
-          <Li>LinkedIn</Li>
-          <Li>Medium</Li>
-          <Li>Dribbble</Li>
-          <Li>GitHub</Li>
+          <Li>
+            <a href="https://www.linkedin.com/in/lewis-harris/" target="blank">
+              Github
+            </a>
+          </Li>
+          <Li>
+            <a href="https://www.github.com/lewisharris" target="blank">
+              LinkedIn
+            </a>
+          </Li>
+          <Li>
+            <a href="https://dribbble.com/lewisharris" target="blank">
+              Dribbble
+            </a>
+          </Li>
+          <Li>
+            <a href="https://medium.com/@lewisdanielharris" target="blank">
+              Medium
+            </a>
+          </Li>
         </Ul>
       </LinkContainer>
       <P>Lewis Harris 2020</P>

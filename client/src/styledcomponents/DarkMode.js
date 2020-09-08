@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MoonSun from "../images/icons/MoonSun.png";
 
 const Container = styled.div`
   width: 32px;
@@ -36,6 +37,15 @@ const Circle = styled.div`
   }
 `;
 
+const Img = styled.img`
+  height: 80%;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 class DarkMode extends React.Component {
   constructor(props) {
     super(props);
@@ -62,7 +72,9 @@ class DarkMode extends React.Component {
             }
           }}
         >
-          <Circle toggle={this.state.toggle}></Circle>
+          <Circle toggle={this.state.toggle}>
+            <Img src={MoonSun} alt="dark-mode"></Img>
+          </Circle>
         </Container>
       </>
     );

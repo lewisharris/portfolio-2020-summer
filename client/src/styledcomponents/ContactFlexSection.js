@@ -35,13 +35,15 @@ const P = styled.p`
 
 const ContactFlexSection = props => {
   return (
-    <FlexSection>
-      <Image src={props.image} alt={props.image}></Image>
-      <Caption>
-        <H5>{props.header}</H5>
-        <P>{props.text}</P>
-      </Caption>
-    </FlexSection>
+    <a target="blank" href={props.link}>
+      <FlexSection>
+        <Image src={props.image} alt={props.image}></Image>
+        <Caption>
+          <H5>{props.header}</H5>
+          <P>{props.text}</P>
+        </Caption>
+      </FlexSection>
+    </a>
   );
 };
 

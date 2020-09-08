@@ -1,28 +1,14 @@
-import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 import H2 from "./styledcomponents/H2";
 import Section from "./styledcomponents/Section";
 import Gallery from "./styledcomponents/Gallery";
 import H3 from "./styledcomponents/H3";
 import GitHubInfo from "./styledcomponents/GitHubInfo";
 
-const ProjectsPage = () => {
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    console.log(headerRef);
-    gsap.from(headerRef.current, {
-      duration: 3,
-      autoAlpha: 0,
-      ease: "none",
-      delay: 1
-    });
-  });
+const ProjectsPage = props => {
   return (
-    <Section>
-      <H2 ref={headerRef} className="header">
-        Projects.
-      </H2>
+    <Section id="projects">
+      <H2>Projects.</H2>
       <H3>Some of my most recent projects using a range of technologies.</H3>
       <GitHubInfo />
       <Gallery />
