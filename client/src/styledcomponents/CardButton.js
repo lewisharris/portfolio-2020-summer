@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CardButton = styled.button`
   width: 60px;
-  background: white;
+  background: ${props => props.theme.bg};
   margin-right: 10px;
   border-radius: 500px;
   border: 2px solid
@@ -11,11 +11,12 @@ const CardButton = styled.button`
     }};
   box-sizing: border-box;
   padding: 5px;
+  color: ${props => props.theme.darkText};
   :hover {
     background: ${props => {
       return props.color;
     }};
-    color: white;
+    color: ${props => props.theme.lightText};
     cursor: pointer;
   }
 `;

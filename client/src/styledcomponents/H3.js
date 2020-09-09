@@ -3,9 +3,9 @@ import styled from "styled-components";
 const H3 = styled.h3`
   color: ${props => {
     if (props.light) {
-      return "#cecece";
+      return props.theme.lightText;
     } else {
-      return "#252525";
+      return props.theme.darkText;
     }
   }};
   font-size: 36px;

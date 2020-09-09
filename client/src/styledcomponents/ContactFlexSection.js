@@ -7,9 +7,11 @@ const FlexSection = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  color: ${props => props.theme.darkText};
 `;
 const Image = styled.img`
   vertical-align: middle;
+  filter: ${props => props.theme.icon};
   height: 70px;
   margin: 10px 10px 50px 10px;
   :hover {

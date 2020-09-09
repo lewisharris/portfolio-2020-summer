@@ -5,6 +5,7 @@ const H1 = styled.h1`
   font-size: 96px;
   font-weight: 900;
   margin: 0px;
+  margin-top: 10vh;
   margin-bottom: 10px;
   padding: 0px;
   z-index: 2;

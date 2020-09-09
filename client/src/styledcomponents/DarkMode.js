@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MoonSun from "../images/icons/MoonSun.png";
+import Moon from "../images/icons/Moon.png";
+import Sun from "../images/icons/Sun.png";
 
 const Container = styled.div`
   width: 32px;
@@ -61,6 +62,13 @@ class DarkMode extends React.Component {
   };
 
   render() {
+    const Icon = () => {
+      if (this.props.currentTheme.name === "LightTheme") {
+        return Moon;
+      } else {
+        return Sun;
+      }
+    };
     return (
       <>
         <Container
@@ -70,10 +78,11 @@ class DarkMode extends React.Component {
             } else {
               this.setToggle("day");
             }
+            this.props.toggleTheme();
           }}
         >
           <Circle toggle={this.state.toggle}>
-            <Img src={MoonSun} alt="dark-mode"></Img>
+            <Img src={Icon()} alt="dark-mode"></Img>
           </Circle>
         </Container>
       </>

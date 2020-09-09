@@ -1,7 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 import ToggleGallery from "./ToggleGallery";
 import CardContainer from "./CardContainer";
 import { A, ABold } from "./A";
+
+const Container = styled.div`
+  width: "100%";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: ${props => props.theme.secondaryBg};
+  padding: 2vw;
+  margin: 0px auto;
+  margin-top: 80px;
+  box-sizing: border-box;
+`;
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -20,19 +33,8 @@ class Gallery extends React.Component {
   };
 
   render() {
-    const galleryStyle = {
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      background: "#fafafa",
-      padding: "2vw",
-      margin: "0px auto",
-      marginTop: "80px",
-      boxSizing: "border-box"
-    };
     return (
-      <div style={galleryStyle}>
+      <Container>
         <ToggleGallery
           changeDisplay={this.changeDisplayType}
           displayType={this.state.displayType}
@@ -42,7 +44,7 @@ class Gallery extends React.Component {
         <A target="#" href="https://www.github.com/lewisharris">
           Full list of projects available on <ABold>GitHub</ABold>
         </A>
-      </div>
+      </Container>
     );
   }
 }

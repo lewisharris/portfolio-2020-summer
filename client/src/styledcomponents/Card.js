@@ -10,9 +10,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  background: #ffffff;
+  background: ${props => props.theme.bg};
   box-sizing: border-box;
   padding: 20px;
+  color: ${props => props.theme.darkText};
 `;
 const ButtonFlexBox = styled.div`
   width: 100%;

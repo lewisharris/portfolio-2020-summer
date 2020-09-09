@@ -11,7 +11,7 @@ const landingStyle = {
   width: "100vw",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center"
+  justifyContent: "space-around"
 };
 
 const LandingPage = () => {
@@ -29,7 +29,7 @@ const LandingPage = () => {
       <div style={landingStyle}>
         <Section>
           <H1>Lewis Harris</H1>
-          <H3 light>Full Stack Developer</H3>
+          <H3 light>Creative Web Developer based in London,UK</H3>
           <Button>
             <a href="#projects">Explore Projects</a>
           </Button>

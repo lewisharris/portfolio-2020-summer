@@ -9,7 +9,7 @@ const Button = styled.button`
   justify-content: center;
   border: 2px solid #cecece;
   border-radius: 500px;
-  color: #252525;
+  color: ${props => props.theme.darkText};
   background: none;
   margin: 0px auto;
   :hover {

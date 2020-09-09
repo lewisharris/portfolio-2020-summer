@@ -73,7 +73,10 @@ class NavBar extends React.Component {
         <Img src={Logo} alt={"main-logo"}></Img>
         {this.state.windowSize > 575 ? (
           <Ul>
-            <DarkMode />
+            <DarkMode
+              toggleTheme={this.props.toggleTheme}
+              currentTheme={this.props.currentTheme}
+            />
             <Li>
               <a href="#projects">Projects</a>
             </Li>

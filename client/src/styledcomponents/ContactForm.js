@@ -11,11 +11,11 @@ const Form = styled.form`
 const Label = styled.label`
   font-size: 14px;
   margin-top: 10px;
-  color: #252525;
+  color: ${props => props.theme.darkText};
 `;
 const Input = styled.input`
   height: ${props => (props.message === true ? "80px" : "40px")};
-  background: #f5f5f5;
+  background: ${props => props.theme.form};
   border: none;
   margin: 10px 0px;
   padding: 0px 10px;
@@ -40,7 +40,7 @@ const Button = styled.button`
 `;
 
 const P = styled.p`
-  color: #252525;
+  color: ${props => props.theme.darkText};
   font-size: 17px;
   text-align: center;
 `;
@@ -48,6 +48,7 @@ const P = styled.p`
 const Img = styled.img`
   width: 70px;
   margin: 0px auto;
+  filter: ${props => props.theme.icon};
 `;
 
 class ContactForm extends React.Component {

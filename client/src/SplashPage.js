@@ -13,6 +13,9 @@ const Container = styled(animated.div)`
   margin: 0px;
   text-align: center;
   opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Img = styled.img`
@@ -20,10 +23,15 @@ const Img = styled.img`
   max-width: 300px;
   margin: 0px auto;
   padding: 0px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+`;
+
+const P = styled.p`
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 0px;
 `;
 
 const Splash = props => {
@@ -33,6 +41,7 @@ const Splash = props => {
   return (
     <Container style={introAnimation}>
       <Img src={Logo} />
+      <P>lewisharris.io</P>
     </Container>
   );
 };
