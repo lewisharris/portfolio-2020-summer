@@ -15,7 +15,7 @@ import Container from "./styledcomponents/Container";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 3, theme: LightTheme };
+    this.state = { count: 0, theme: LightTheme };
   }
   countdown = () => {
     if (this.state.count > 0) {

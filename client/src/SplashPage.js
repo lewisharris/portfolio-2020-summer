@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import Logo from "./images/icons/logo-intro.svg";
 import { useSpring, animated } from "react-spring";
+import IntroLogo from "./IntroLogo";
 
 const Container = styled(animated.div)`
   position: absolute;
@@ -16,13 +17,6 @@ const Container = styled(animated.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
-
-const Img = styled.img`
-  width: 20vw;
-  max-width: 300px;
-  margin: 0px auto;
-  padding: 0px;
 `;
 
 const P = styled.p`
@@ -40,7 +34,7 @@ const Splash = props => {
   });
   return (
     <Container style={introAnimation}>
-      <Img src={Logo} />
+      <IntroLogo />
       <P>lewisharris.io</P>
     </Container>
   );

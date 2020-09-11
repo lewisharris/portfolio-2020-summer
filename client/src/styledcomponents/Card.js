@@ -52,22 +52,23 @@ const Img = styled.img`
 const Card = props => {
   return (
     <Container displayType={props.displayType}>
-      <H3>Header</H3>
-      <LanguagesText>HTML, CSS, React, Redux, NodeJS</LanguagesText>
+      <H3>{props.details.name}</H3>
+      <LanguagesText>{props.details.technology}</LanguagesText>
       {props.displayType === "Grid" ? (
-        <Img src={pushFIT} alt="image"></Img>
+        <Img src={props.details.image} alt={props.details.image}></Img>
       ) : null}
 
-      <MainText>
-        According to Google, “A floating action button (FAB) performs the
-        primary, or most common, action on a screen. It appears in front of all
-        screen content, typically as a circular shape with an icon in its
-        center.
-      </MainText>
+      <MainText>{props.details.description}</MainText>
       <ButtonFlexBox>
-        <CardButton color="#11C765">Demo</CardButton>
-        <CardButton color="#409CBE">Code</CardButton>
-        <CardButton color="#E66D6B">Design</CardButton>
+        <CardButton color="#11C765" link={props.details.demo}>
+          Demo
+        </CardButton>
+        <CardButton color="#409CBE" link={props.details.code}>
+          Code
+        </CardButton>
+        <CardButton color="#E66D6B" link={props.details.design}>
+          Design
+        </CardButton>
       </ButtonFlexBox>
     </Container>
   );
