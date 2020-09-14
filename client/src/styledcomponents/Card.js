@@ -59,14 +59,32 @@ const Card = props => {
 
       <MainText>{props.details.description}</MainText>
       <ButtonFlexBox>
-        <CardButton color="#11C765" link={props.details.demo}>
-          Demo
+        <CardButton color="#11C765" link={props.details.demo} type="button">
+          <a href={props.details.demo} target="blank">
+            Demo
+          </a>
         </CardButton>
-        <CardButton color="#409CBE" link={props.details.code}>
-          Code
+        <CardButton
+          color="#409CBE"
+          link={props.details.code}
+          target="blank"
+          onClick={props.details.code}
+          type="button"
+        >
+          <a href={props.details.code} target="blank">
+            Code
+          </a>
         </CardButton>
-        <CardButton color="#E66D6B" link={props.details.design}>
-          Design
+        <CardButton
+          color="#E66D6B"
+          link={props.details.design}
+          target="blank"
+          onClick={props.details.design}
+          type="button"
+        >
+          <a href={props.details.design} target="blank">
+            Design
+          </a>
         </CardButton>
       </ButtonFlexBox>
     </Container>

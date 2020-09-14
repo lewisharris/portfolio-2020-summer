@@ -14,17 +14,7 @@ const List = [
     image: PushFitImg,
     description:
       "A useful workout tool that allows you to enter exercises with specified sets and reps and create a workout for your gym routine.",
-    demo: "link to demo",
-    code: "link to code",
-    design: "link to design",
-    keyId: 3
-  },
-  {
-    name: "New Project",
-    technology: "React, NodeJS, GraphQL, Express, MongoDB",
-    image: "none",
-    description: "lorem text",
-    demo: "link to demo",
+    demo: "https://www.google.com",
     code: "link to code",
     design: "link to design",
     keyId: 1
@@ -47,27 +37,7 @@ const List = [
     demo: "link to demo",
     code: "link to code",
     design: "link to design",
-    keyId: 4
-  },
-  {
-    name: "SummerDaze",
-    technology: "javascript",
-    image: "none",
-    description: "lorem text",
-    demo: "link to demo",
-    code: "link to code",
-    design: "link to design",
-    keyId: 5
-  },
-  {
-    name: "SummerDaze",
-    technology: "javascript",
-    image: "none",
-    description: "lorem text",
-    demo: "link to demo",
-    code: "link to code",
-    design: "link to design",
-    keyId: 6
+    keyId: 3
   },
   {
     name: "Nutrition Checker",
@@ -77,7 +47,7 @@ const List = [
     demo: "link to demo",
     code: "link to code",
     design: "link to design",
-    keyId: 7
+    keyId: 4
   },
   {
     name: "Drum Kit",
@@ -87,7 +57,7 @@ const List = [
     demo: "link to demo",
     code: "link to code",
     design: "link to design",
-    keyId: 8
+    keyId: 5
   },
   {
     name: "Random Destination",
@@ -97,7 +67,7 @@ const List = [
     demo: "link to demo",
     code: "link to code",
     design: "link to design",
-    keyId: 9
+    keyId: 6
   }
 ];
 
