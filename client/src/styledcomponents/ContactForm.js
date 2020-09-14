@@ -59,26 +59,32 @@ class ContactForm extends React.Component {
       email: "",
       number: "",
       message: "",
-      submitButton: "Send"
+      status: ""
     };
   }
 
-  handleInput = event => {
-    console.log(this.state.name);
+  handleInput = e => {
+    let change = {};
+    change[e.target.name] = e.target.value;
+    this.setState(change);
+  };
+
+  handleSubmit = event => {
+    console.log(event.target);
+    event.preventDefault();
+    this.setState({ name: "" });
+    this.setState({ email: "" });
+    this.setState({ number: "" });
+    this.setState({ message: "" });
   };
 
   render() {
+    const status = this.state.status;
     return (
       <Form
-        action="https://formspree.io/xnqgekaa"
+        action="https://formspree.io/moqpaebj"
         method="POST"
-        onKeyDown={e => {
-          if (e.key === "Enter") {
-            e.preventDefault();
-            this.handleSubmit();
-            console.log("hi");
-          }
-        }}
+        onSubmit={this.handleSubmit}
       >
         <Label>Name*</Label>
         <Input
@@ -86,6 +92,7 @@ class ContactForm extends React.Component {
           name="name"
           onChange={this.handleInput}
           value={this.state.name}
+          required
         ></Input>
         <Label>Email Address*</Label>
         <Input
@@ -103,21 +110,19 @@ class ContactForm extends React.Component {
         ></Input>
         <Label>Message*</Label>
         <Input
-          type="text"
+          type="text-area"
           name="message"
-          onChange={this.handleInput()}
+          onChange={this.handleInput}
           value={this.state.message}
+          message
+          required
         ></Input>
-        <Button
-          onClick={event => {
-            event.preventDefault();
-            this.setState({ submitButton: "Message Sent!" });
-            setTimeout(() => {
-              this.setState({ submitButton: "Send" });
-            }, 1000);
-          }}
-        >
-          {this.state.submitButton}
+        <Button onClick={this.handleSubmit}>
+          {status === "SUCCESS"
+            ? "Send!"
+            : status === "ERROR"
+            ? "Oops, looks like there was an error"
+            : "Submit"}
         </Button>
         <P>or</P>
         <a href="https://www.linkedin.com/in/lewis-harris/" target="blank">

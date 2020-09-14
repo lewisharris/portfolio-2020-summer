@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { DarkTheme, LightTheme } from "./theme/Theme";
 import "./app.css";
 import LandingPage from "./LandingPage";
@@ -15,7 +15,7 @@ import Container from "./styledcomponents/Container";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0, theme: LightTheme };
+    this.state = { count: 2, theme: LightTheme };
   }
   countdown = () => {
     if (this.state.count > 0) {
