@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lewisharris/portfolio-2020-summer/precache-manifest.9f75d1a28b1e92779998e2f4aa80cea2.js"
+  "/lewisharris/portfolio-2020-summer/precache-manifest.d80490ccbaf6c671001ea43392a28842.js"
 );
 
 self.addEventListener('message', (event) => {
