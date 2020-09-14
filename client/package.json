@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://lewisharris.github.io/portfolio-2020-summer/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
