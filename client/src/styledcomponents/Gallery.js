@@ -5,7 +5,7 @@ import CardContainer from "./CardContainer";
 import { A, ABold } from "./A";
 
 const Container = styled.div`
-  width: "100%";
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

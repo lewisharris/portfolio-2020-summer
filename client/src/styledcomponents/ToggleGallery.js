@@ -11,7 +11,7 @@ const Button = styled.button`
   border-radius: 500px;
   color: ${props => props.theme.darkText};
   background: none;
-  margin: 0px auto;
+  margin: 20px auto;
   :hover {
     cursor: pointer;
     border-color: #409cbe;

@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 export const A = styled.a`
   font-size: 16px;
-  color: ${props => props.theme.darkText};
+  color: ${props => {
+    if (props.light) {
+      return props.theme.lightText;
+    } else {
+      return props.theme.darkText;
+    }
+  }};
   margin: 20px auto;
   text-align: center;
   cursor: pointer;

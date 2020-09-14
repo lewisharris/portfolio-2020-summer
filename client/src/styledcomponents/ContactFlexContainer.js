@@ -6,7 +6,7 @@ const ContactFlexContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   min-width: 300px;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 export default ContactFlexContainer;

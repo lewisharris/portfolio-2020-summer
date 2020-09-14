@@ -11,7 +11,7 @@ const H5 = styled.h5`
   font-size: 24px;
   font-weight: 300;
   padding: 0px;
-  margin: 20px 0px;
+  margin: 0px;
 `;
 
 export default H5;

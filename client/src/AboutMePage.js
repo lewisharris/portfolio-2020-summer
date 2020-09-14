@@ -6,6 +6,7 @@ import H3 from "./styledcomponents/H3";
 import H5 from "./styledcomponents/H5";
 import P from "./styledcomponents/P";
 import Button from "./styledcomponents/Button";
+import { A } from "./styledcomponents/A";
 
 const AboutMe = styled.div`
   background: #2a2a2a;
@@ -44,7 +45,7 @@ const AboutMe = styled.div`
 `;
 
 const SkillsContainer = styled.div`
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left: 5vw;
 `;
 
@@ -63,7 +64,8 @@ const AboutMePage = () => {
           of experience within design and engineering in an agile environment
           the automotive industry In which I have contributed to engineering
           some of the most cutting edge and iconic automotive projects of the
-          decade.
+          decade. I have now migrated away from designing and developing
+          physical products and moved into technology.
         </P>
         <SkillsContainer>
           <H5 light>Front end</H5>
@@ -74,7 +76,9 @@ const AboutMePage = () => {
           <P weight={200}>GraphQL, Express, MongoDB, NodeJS</P>
           <H5 light>Design</H5>
           <P weight={200}>XD, Illustrator, Photoshop</P>
-          <Button>View Digital Resume</Button>
+          <Button>
+            <A light>View Resume</A>
+          </Button>
         </SkillsContainer>
       </Section>
     </AboutMe>

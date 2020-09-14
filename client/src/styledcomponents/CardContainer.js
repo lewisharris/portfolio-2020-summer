@@ -33,9 +33,10 @@ const List = [
     name: "Alien Escape",
     technology: "Vanilla Javascript, Sass, CSS3 HTML5",
     image: AlienEscapeImg,
-    description: "lorem text",
-    demo: "link to demo",
-    code: "link to code",
+    description:
+      "Try and help the alien escape to his ship in time before it departs without him. This is a hangman style game in which the user has to guess the correct programming language.",
+    demo: "https://lewisharris.github.io/alien-escape/",
+    code: "https://github.com/lewisharris/alien-escape",
     design: "link to design",
     keyId: 3
   },
@@ -43,7 +44,8 @@ const List = [
     name: "Nutrition Checker",
     technology: "javascript",
     image: NutritionChecker,
-    description: "lorem text",
+    description:
+      "A nutrition checker using the edamam api to find nutritional information about various foods using a searchbar",
     demo: "https://lewisharris.github.io/React-Nutrition-Checker/",
     code: "https://github.com/lewisharris/React-Nutrition-Checker",
     design: "link to design",
@@ -53,7 +55,8 @@ const List = [
     name: "Drum Kit",
     technology: "javascript",
     image: DrumKitImg,
-    description: "lorem text",
+    description:
+      "A keypad drum kit for instant musical fun. Tap the keys to make your own beats",
     demo: "https://lewisharris.github.io/drum-kit/",
     code: "https://github.com/lewisharris/drum-kit",
     design: "link to design",
@@ -63,7 +66,8 @@ const List = [
     name: "Random Destination",
     technology: "javascript",
     image: HolidayPickerImg,
-    description: "lorem text",
+    description:
+      "This is a random destination picker that utilises the countries API to pick a random destination to go on holiday, to get the data of each country I used the countries REST API",
     demo: "https://lewisharris.github.io/random-holiday-generator/",
     code: "https://github.com/lewisharris/random-holiday-generator",
     design: "link to design",
@@ -73,6 +77,7 @@ const List = [
 
 const Container = styled.div`
   display: grid;
+  margin: 0px auto;
   grid-template-columns: ${props => {
     if (props.displayType === "Grid") {
       return "repeat(auto-fill, minmax(300px, 1fr));";
@@ -80,7 +85,7 @@ const Container = styled.div`
     return "auto;";
   }};
   justify-content: center;
-  width: 100%;
+  width: 90%;
 `;
 
 const CardContainer = props => {

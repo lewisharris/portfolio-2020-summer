@@ -10,7 +10,11 @@ const H4 = styled.h4`
   }};
   font-size: 24px;
   font-weight: 500;
+  text-align:left
   padding: 0px;
+  @media only screen and (max-width:1000px){
+    text-align:center;
+  }
 `;
 
 export default H4;

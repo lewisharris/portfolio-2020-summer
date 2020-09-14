@@ -7,6 +7,7 @@ const P = styled.p`
   font-size: 14px;
   color: #f5f5f5;
   padding: 0px;
+  max-width: 700px;
   margin-bottom: 30px;
 `;
 

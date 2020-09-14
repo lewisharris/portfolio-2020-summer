@@ -5,13 +5,13 @@ const H1 = styled.h1`
   font-size: 96px;
   font-weight: 900;
   margin: 0px;
-  margin-top: 10vh;
+  margin-top: 20vh;
   margin-bottom: 10px;
   padding: 0px;
   z-index: 2;
 
   @media screen and (max-width: 500px) {
-    font-size: 80px;
+    font-size: 60px;
   }
 `;
 

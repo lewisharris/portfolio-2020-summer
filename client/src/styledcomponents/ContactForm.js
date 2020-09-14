@@ -7,6 +7,7 @@ const Form = styled.form`
   flex-direction: column;
   max-width: 400px;
   min-width: 300px;
+  margin: 0px auto;
 `;
 const Label = styled.label`
   font-size: 14px;
