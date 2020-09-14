@@ -68,7 +68,6 @@ const Card = props => {
           color="#409CBE"
           link={props.details.code}
           target="blank"
-          onClick={props.details.code}
           type="button"
         >
           <a href={props.details.code} target="blank">
@@ -79,7 +78,6 @@ const Card = props => {
           color="#E66D6B"
           link={props.details.design}
           target="blank"
-          onClick={props.details.design}
           type="button"
         >
           <a href={props.details.design} target="blank">

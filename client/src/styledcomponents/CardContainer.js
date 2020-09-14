@@ -14,8 +14,8 @@ const List = [
     image: PushFitImg,
     description:
       "A useful workout tool that allows you to enter exercises with specified sets and reps and create a workout for your gym routine.",
-    demo: "https://www.google.com",
-    code: "link to code",
+    demo: "https://lewisharris.github.io/pushFIT/#/",
+    code: "https://github.com/lewisharris/pushFIT",
     design: "link to design",
     keyId: 1
   },
@@ -44,8 +44,8 @@ const List = [
     technology: "javascript",
     image: NutritionChecker,
     description: "lorem text",
-    demo: "link to demo",
-    code: "link to code",
+    demo: "https://lewisharris.github.io/React-Nutrition-Checker/",
+    code: "https://github.com/lewisharris/React-Nutrition-Checker",
     design: "link to design",
     keyId: 4
   },
@@ -54,8 +54,8 @@ const List = [
     technology: "javascript",
     image: DrumKitImg,
     description: "lorem text",
-    demo: "link to demo",
-    code: "link to code",
+    demo: "https://lewisharris.github.io/drum-kit/",
+    code: "https://github.com/lewisharris/drum-kit",
     design: "link to design",
     keyId: 5
   },
@@ -64,8 +64,8 @@ const List = [
     technology: "javascript",
     image: HolidayPickerImg,
     description: "lorem text",
-    demo: "link to demo",
-    code: "link to code",
+    demo: "https://lewisharris.github.io/random-holiday-generator/",
+    code: "https://github.com/lewisharris/random-holiday-generator",
     design: "link to design",
     keyId: 6
   }

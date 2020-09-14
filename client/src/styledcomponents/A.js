@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const A = styled.a`
   font-size: 16px;
-  color: #eb706e;
+  color: ${props => props.theme.darkText};
   margin: 20px auto;
   text-align: center;
   cursor: pointer;
@@ -10,6 +10,9 @@ export const A = styled.a`
   transition: all 0.3s ease-in-out;
   :hover {
     text-decoration: underline;
+  }
+  :visited {
+    color: ${props => props.theme.darkText};
   }
 `;
 
