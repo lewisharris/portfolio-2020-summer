@@ -62,25 +62,61 @@ class ContactForm extends React.Component {
       submitButton: "Send"
     };
   }
-  handleSubmit = event => {
-    event.preventDefault();
-    this.setState({ formText: "Sent!" });
-  };
 
-  handleInput = () => {};
+  handleInput = event => {
+    console.log(this.state.name);
+  };
 
   render() {
     return (
-      <Form>
+      <Form
+        action="https://formspree.io/xnqgekaa"
+        method="POST"
+        onKeyDown={e => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            this.handleSubmit();
+            console.log("hi");
+          }
+        }}
+      >
         <Label>Name*</Label>
-        <Input type="text" onChange={this.handleInput()}></Input>
+        <Input
+          type="text"
+          name="name"
+          onChange={this.handleInput}
+          value={this.state.name}
+        ></Input>
         <Label>Email Address*</Label>
-        <Input type="email" onChange={this.handleInput()}></Input>
+        <Input
+          type="email"
+          name="email"
+          onChange={this.handleInput}
+          value={this.state.email}
+        ></Input>
         <Label>Contact Number (optional)</Label>
-        <Input type="text" onChange={this.handleInput()}></Input>
+        <Input
+          type="text"
+          name="number"
+          onChange={this.handleInput}
+          value={this.state.number}
+        ></Input>
         <Label>Message*</Label>
-        <Input message={true} type="text" onChange={this.handleInput()}></Input>
-        <Button onClick={event => this.handleSubmit(event)}>
+        <Input
+          type="text"
+          name="message"
+          onChange={this.handleInput()}
+          value={this.state.message}
+        ></Input>
+        <Button
+          onClick={event => {
+            event.preventDefault();
+            this.setState({ submitButton: "Message Sent!" });
+            setTimeout(() => {
+              this.setState({ submitButton: "Send" });
+            }, 1000);
+          }}
+        >
           {this.state.submitButton}
         </Button>
         <P>or</P>
