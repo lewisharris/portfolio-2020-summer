@@ -31,7 +31,7 @@ const P = styled.p`
 const Splash = props => {
   return (
     <Container>
-      <IntroLogo count={props.count} />
+      <IntroLogo />
       <P>lewisharris.io</P>
     </Container>
   );

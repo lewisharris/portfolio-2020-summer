@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import Linkedin from "../images/icons/linkedin-icon.png";
 
+//styling
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -52,32 +53,33 @@ const Img = styled.img`
   filter: ${props => props.theme.icon};
 `;
 
+//component
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      number: "",
-      message: "",
       status: ""
     };
   }
 
-  handleInput = e => {
-    let change = {};
-    change[e.target.name] = e.target.value;
-    this.setState(change);
-  };
-
-  handleSubmit = event => {
-    console.log(event.target);
-    event.preventDefault();
-    this.setState({ name: "" });
-    this.setState({ email: "" });
-    this.setState({ number: "" });
-    this.setState({ message: "" });
-  };
+  handleSubmit(ev) {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
+  }
 
   render() {
     const status = this.state.status;
@@ -85,40 +87,17 @@ class ContactForm extends React.Component {
       <Form
         action="https://formspree.io/moqpaebj"
         method="POST"
-        onSubmit={this.handleSubmit}
+        onSubmit={() => this.handleSubmit}
       >
         <Label>Name*</Label>
-        <Input
-          type="text"
-          name="name"
-          onChange={this.handleInput}
-          value={this.state.name}
-          required
-        ></Input>
+        <Input type="text" name="name" required></Input>
         <Label>Email Address*</Label>
-        <Input
-          type="email"
-          name="email"
-          onChange={this.handleInput}
-          value={this.state.email}
-        ></Input>
+        <Input type="email" name="email" required></Input>
         <Label>Contact Number (optional)</Label>
-        <Input
-          type="text"
-          name="number"
-          onChange={this.handleInput}
-          value={this.state.number}
-        ></Input>
+        <Input type="text" name="number"></Input>
         <Label>Message*</Label>
-        <Input
-          type="text-area"
-          name="message"
-          onChange={this.handleInput}
-          value={this.state.message}
-          message
-          required
-        ></Input>
-        <Button onClick={this.handleSubmit}>
+        <Input type="text-area" name="message" message required></Input>
+        <Button>
           {status === "SUCCESS"
             ? "Send!"
             : status === "ERROR"

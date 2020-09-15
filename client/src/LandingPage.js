@@ -14,7 +14,6 @@ const landingStyle = {
 };
 
 const LandingPage = () => {
-  const isMounted = true;
   return (
     <div style={landingStyle}>
       <div>

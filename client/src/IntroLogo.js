@@ -10,17 +10,24 @@ const Container = styled.div`
 
 const IntroLogo = props => {
   const [dashOffset, setDashOffset] = useState(-1500);
+  const [slashOpacity, setSlashOpacity] = useState(1);
   const lineRef = useRef(null);
+  const slashRef = useRef(null);
   useEffect(() => {
     lineRef.current.style = "transition: all 500ms linear;";
+    const offsetTimer = setTimeout(() => setDashOffset(0), 200);
+    const slashTimer = setTimeout(() => {
+      if (slashOpacity === 1) {
+        setSlashOpacity(0);
+      } else {
+        setSlashOpacity(1);
+      }
+    }, 500);
+    return () => {
+      clearTimeout(slashTimer);
+      clearTimeout(offsetTimer);
+    };
   });
-  const offsetInterval = setInterval(() => {
-    setDashOffset(dashOffset + 600);
-  }, 500);
-
-  if (props.count === 0) {
-    clearInterval(offsetInterval);
-  }
 
   return (
     <Container>
@@ -66,6 +73,8 @@ const IntroLogo = props => {
             <path
               id="forward-slash"
               className="st0"
+              ref={slashRef}
+              opacity={slashOpacity}
               fill="#E66D6B"
               d="M251.9,132.2c-0.7,3.5-1.3,6.9-2,10.4c-1.6,8.3-3.2,16.6-4.8,24.9
 			c-1.9,10-3.9,20.1-5.8,30.1c-1.7,8.7-3.4,17.4-5.1,26.2c-0.8,4.2-1.7,8.4-2.4,12.7c0,0.1,0,0.1,0,0.2c-0.4,2-0.3,4,0.8,5.8

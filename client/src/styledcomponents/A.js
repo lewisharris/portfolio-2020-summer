@@ -9,7 +9,9 @@ export const A = styled.a`
       return props.theme.darkText;
     }
   }};
-  margin: 20px auto;
+  margin: 0px auto;
+  margin-top: 20px;
+  display: inline-block;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -22,8 +24,9 @@ export const A = styled.a`
   }
 `;
 
-export const ABold = styled(A)`
+export const ABold = styled.p`
   font-weight: 600;
-  display: inline-block;
+  display: inline;
   text-decoration: underline;
+  margin-top: 5px;
 `;
