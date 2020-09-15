@@ -40,6 +40,7 @@ const MainText = styled.p`
   font-size: 14px;
   font-weight: 300;
   max-width: 700px;
+  min-height: 70px;
 `;
 
 const Img = styled.img`

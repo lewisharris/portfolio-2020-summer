@@ -15,6 +15,10 @@ const MouseBorder = styled.div`
     background: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
+  @media screen and (orientation: landscape) and (max-width: 812px) {
+    bottom: 1vh;
+    left: 85%;
+  }
 `;
 const P = styled.p`
   text-align: center;

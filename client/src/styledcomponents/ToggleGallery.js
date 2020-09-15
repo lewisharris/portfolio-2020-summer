@@ -4,8 +4,14 @@ import styled from "styled-components";
 const Button = styled.button`
   max-width: 110px;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border: 2px solid #cecece;
   border-radius: 500px;

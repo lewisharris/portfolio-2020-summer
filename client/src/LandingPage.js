@@ -7,10 +7,7 @@ import MouseIcon from "./styledcomponents/MouseIcon";
 
 const landingStyle = {
   height: "100vh",
-  width: "100vw",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start"
+  width: "100vw"
 };
 
 const LandingPage = () => {

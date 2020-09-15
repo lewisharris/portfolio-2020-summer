@@ -10,6 +10,14 @@ const H1 = styled.h1`
   padding: 0px;
   z-index: 2;
 
+  @media screen and (max-width: 368px) {
+    font-size: 48px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 812px) {
+    font-size: 48px;
+  }
+
   @media screen and (max-width: 500px) {
     font-size: 60px;
   }
