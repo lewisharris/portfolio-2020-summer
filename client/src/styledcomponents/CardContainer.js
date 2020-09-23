@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import PushFitImg from "../images/pushfit-mockup.jpg";
@@ -77,6 +77,7 @@ const List = [
 ];
 
 const Container = styled.div`
+  visibility: none;
   display: grid;
   margin: 0px auto;
   grid-template-columns: ${props => {

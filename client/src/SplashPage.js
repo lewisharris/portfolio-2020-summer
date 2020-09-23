@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import React from "react";
-import { animated } from "react-spring";
 import IntroLogo from "./IntroLogo";
 
-const Container = styled(animated.div)`
+const Container = styled.div`
   position: absolute;
   top: 0px;
   left: 0px;
