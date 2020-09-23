@@ -7,6 +7,7 @@ import H5 from "./styledcomponents/H5";
 import P from "./styledcomponents/P";
 import Button from "./styledcomponents/Button";
 import { A } from "./styledcomponents/A";
+import CV from "./cv/lewis-harris-cv.pdf";
 
 const AboutMe = styled.div`
   background: #2a2a2a;
@@ -77,7 +78,9 @@ const AboutMePage = () => {
           <H5 light>Design</H5>
           <P weight={200}>XD, Illustrator, Photoshop</P>
           <Button>
-            <A light>View Resume</A>
+            <A href={CV} target="_blank" light>
+              View Resume
+            </A>
           </Button>
         </SkillsContainer>
       </Section>

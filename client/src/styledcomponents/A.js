@@ -20,7 +20,13 @@ export const A = styled.a`
     text-decoration: underline;
   }
   :visited {
-    color: ${props => props.theme.darkText};
+    color: ${props => {
+      if (props.light) {
+        return props.theme.lightText;
+      } else {
+        return props.theme.darkText;
+      }
+    }};
   }
 `;
 

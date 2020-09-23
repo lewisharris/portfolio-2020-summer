@@ -38,7 +38,7 @@ const List = [
       "Try and help the alien escape to his ship in time before it departs without him. This is a hangman style game in which the user has to guess the correct programming language. Don't get left behind.",
     demo: "https://lewisharris.github.io/alien-escape/",
     code: "https://github.com/lewisharris/alien-escape",
-    design: "link to design",
+    design: "",
     keyId: 3
   },
   {
@@ -49,7 +49,7 @@ const List = [
       "A nutrition checker using the Edamam api to find nutritional information about various foods using a search bar.",
     demo: "https://lewisharris.github.io/React-Nutrition-Checker/",
     code: "https://github.com/lewisharris/React-Nutrition-Checker",
-    design: "link to design",
+    design: "",
     keyId: 4
   },
   {
@@ -60,7 +60,7 @@ const List = [
       "A keypad drum kit for instant musical fun. Tap the keys to make your own beats from your keyboard. This was made using Vanilla javascript.",
     demo: "https://lewisharris.github.io/drum-kit/",
     code: "https://github.com/lewisharris/drum-kit",
-    design: "link to design",
+    design: "",
     keyId: 5
   },
   {
@@ -71,7 +71,7 @@ const List = [
       "This is a random destination picker that utilises the Countries API to pick a random destination to go on holiday, where will you go next.",
     demo: "https://lewisharris.github.io/random-holiday-generator/",
     code: "https://github.com/lewisharris/random-holiday-generator",
-    design: "link to design",
+    design: "",
     keyId: 6
   }
 ];
@@ -87,6 +87,7 @@ const Container = styled.div`
   }};
   justify-content: center;
   width: 90%;
+  align-self: center;
 `;
 
 const CardContainer = props => {

@@ -50,6 +50,25 @@ const Img = styled.img`
 `;
 
 const Card = props => {
+  const designOption = () => {
+    if (props.details.design === "") {
+      return null;
+    } else {
+      return (
+        <CardButton
+          color="#E66D6B"
+          link={props.details.design}
+          target="blank"
+          type="button"
+        >
+          <a href={props.details.design} target="blank">
+            Design
+          </a>
+        </CardButton>
+      );
+    }
+  };
+
   return (
     <Container displayType={props.displayType}>
       <H3>{props.details.name}</H3>
@@ -75,16 +94,7 @@ const Card = props => {
             Code
           </a>
         </CardButton>
-        <CardButton
-          color="#E66D6B"
-          link={props.details.design}
-          target="blank"
-          type="button"
-        >
-          <a href={props.details.design} target="blank">
-            Design
-          </a>
-        </CardButton>
+        {designOption()}
       </ButtonFlexBox>
     </Container>
   );
