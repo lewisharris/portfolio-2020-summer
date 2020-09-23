@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "../images/icons/logo-main.png";
 import DarkMode from "./DarkMode";
 import Hamburger from "./Hamburger";
+import { gsap } from "gsap";
 
 const Nav = styled.nav`
   width: 100vw;
@@ -44,6 +45,7 @@ const Img = styled.img`
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.NavRef = React.createRef();
     this.state = {
       pullRequests: 0,
       commits: 0,
@@ -56,9 +58,27 @@ class NavBar extends React.Component {
     this.setState({ windowSize: windowWidth });
   };
 
+  gsapAnim = (ref, duration, delay) => {
+    gsap.from(ref.current, {
+      duration: duration,
+      translateX: "5%",
+      opacity: 0,
+      ease: "ease-in-out",
+      delay: delay
+    });
+    gsap.to(ref.current, {
+      duration: duration,
+      translateX: "0%",
+      opacity: 1,
+      ease: "ease-in-out",
+      delay: delay
+    });
+  };
+
   componentDidMount() {
     window.addEventListener("resize", this.getWindowSize);
     this.getWindowSize();
+    this.gsapAnim(this.NavRef, 2, 0);
   }
 
   componentWillUnmount() {
@@ -66,8 +86,8 @@ class NavBar extends React.Component {
   }
   render() {
     return (
-      <Nav>
-        <Img src={Logo} alt={"main-logo"}></Img>
+      <Nav ref={this.NavRef}>
+        <Img src={Logo} alt={"main-logo"} />
         {this.state.windowSize > 575 ? (
           <Ul>
             <DarkMode
