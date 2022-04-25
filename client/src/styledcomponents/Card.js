@@ -30,6 +30,15 @@ const LanguagesText = styled.p`
   margin: 5px 0px;
 `;
 
+const StackText = styled.p`
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0px;
+  margin: 0px 0px;
+`;
+
 const H3 = styled.h3`
   margin: 0px;
   font-size: 24px;
@@ -72,11 +81,11 @@ const Card = props => {
   return (
     <Container displayType={props.displayType}>
       <H3>{props.details.name}</H3>
+      <StackText>{props.details.stack}</StackText>
       <LanguagesText>{props.details.technology}</LanguagesText>
       {props.displayType === "Grid" ? (
         <Img src={props.details.image} alt={props.details.image}></Img>
       ) : null}
-
       <MainText>{props.details.description}</MainText>
       <ButtonFlexBox>
         <CardButton color="#11C765" link={props.details.demo} type="button">

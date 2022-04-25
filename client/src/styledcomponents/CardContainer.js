@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import EatWellImg from "../images/eatwell-mockup.jpg";
 import PushFitImg from "../images/pushfit-mockup.jpg";
 import AlienEscapeImg from "../images/alien-escape.jpeg";
 import HolidayPickerImg from "../images/destination-somewhere.jpeg";
@@ -9,15 +10,27 @@ import NutritionChecker from "../images/nutrition-checker.jpeg";
 
 const List = [
   {
+    name: "EatWell",
+    stack: "Full Stack",
+    technology: "React, NodeJS, Express, MongoDB",
+    image: EatWellImg,
+    description:
+      "Calculate your daily intake of food with this full stack food tracking app. With a food API search tool, manual entry option, and custom calorie targets. Created with node and express on the back end, and React on the front end",
+    demo: "https://eat-well-food-tracker.herokuapp.com/login",
+    code: "https://github.com/lewisharris/Eatwell",
+    design: "https://github.com/lewisharris/Eatwell/blob/master/README.md",
+    keyId: 1
+  },
+  {
     name: "PushFit",
-    technology: "React, React-Router, Sass, CSS3, HTML5",
+    technology: "React, React-Router, `styled-components, CSS3, HTML5",
     image: PushFitImg,
     description:
       "A useful workout tool that allows you to enter exercises with specified sets and reps and create a workout for your gym routine. With workout stats and variable rest periods you can create your own HIIT workouts in no time.",
     demo: "https://lewisharris.github.io/pushFIT/#/",
     code: "https://github.com/lewisharris/pushFIT",
     design: "https://dribbble.com/shots/14207881-Personal-Fitness-App",
-    keyId: 1
+    keyId: 2
   },
   // {
   //   name: "Workout Tracker",
