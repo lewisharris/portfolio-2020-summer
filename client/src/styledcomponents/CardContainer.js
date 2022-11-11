@@ -75,17 +75,6 @@ const List = [
     code: "https://github.com/lewisharris/drum-kit",
     design: "",
     keyId: 5
-  },
-  {
-    name: "Random Destination",
-    technology: "Vanilla Javascript, CSS3, HTML5",
-    image: HolidayPickerImg,
-    description:
-      "This is a random destination picker that utilises the Countries API to pick a random destination to go on holiday, where will you go next.",
-    demo: "https://lewisharris.github.io/random-holiday-generator/",
-    code: "https://github.com/lewisharris/random-holiday-generator",
-    design: "",
-    keyId: 6
   }
 ];
 
