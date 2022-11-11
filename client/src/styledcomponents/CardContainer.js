@@ -23,7 +23,7 @@ const List = [
   },
   {
     name: "PushFit",
-    technology: "React, React-Router, `styled-components, CSS3, HTML5",
+    technology: "React, React-Router, styled-components, CSS3, HTML5",
     image: PushFitImg,
     description:
       "A useful workout tool that allows you to enter exercises with specified sets and reps and create a workout for your gym routine. With workout stats and variable rest periods you can create your own HIIT workouts in no time.",

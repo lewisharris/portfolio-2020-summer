@@ -60,18 +60,18 @@ const AboutMePage = () => {
           development.
         </H3>
         <P weight={200}>
-          Creative web developer with proven passion for technology and over one
-          years experience building websites and web apps. I have over 6 years
-          of experience within design and engineering in an agile environment
-          the automotive industry In which I have contributed to engineering
-          some of the most cutting edge and iconic automotive projects of the
-          decade. I have now migrated away from designing and developing
-          physical products and moved into technology.
+          Creative web developer with proven passion for technology. I have over
+          9 years of experience within design and engineering in an agile
+          environment the automotive industry In which I have contributed to
+          engineering some of the most cutting edge and iconic automotive
+          projects of the decade. I have now migrated away from designing and
+          developing physical products and moved into technology.
         </P>
         <SkillsContainer>
           <H5 light>Front end</H5>
           <P weight={200}>
-            React, Redux, GraphQL, Javascript, Sass, CSS3, HTML5
+            React, React-Native, Redux, Typescript, Javascript, Sass, CSS3,
+            HTML5
           </P>
           <H5 light>Back end</H5>
           <P weight={200}>GraphQL, Express, MongoDB, NodeJS</P>
