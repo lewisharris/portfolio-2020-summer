@@ -54,33 +54,16 @@ const IconSegment = styled.div`
   background: #cecece;
   margin: 1px;
 `;
-
-class ToggleGallery extends React.Component {
-  returnText = () => {
-    if (this.props.displayType === "Grid") {
-      return "List";
-    } else {
-      return "Grid";
-    }
-  };
-  render() {
-    return (
-      <Button
-        type="button"
-        onClick={props => {
-          this.props.changeDisplay();
-        }}
-      >
-        <IconContainer>
-          <IconSegment displayType={this.props.displayType} />
-          <IconSegment displayType={this.props.displayType} />
-          <IconSegment displayType={this.props.displayType} />
-          <IconSegment displayType={this.props.displayType} />
-        </IconContainer>
-        <P>{this.returnText()} View</P>
-      </Button>
-    );
-  }
+export default function ToggleGallery() {
+  return (
+    <Button type="button">
+      <IconContainer>
+        <IconSegment />
+        <IconSegment />
+        <IconSegment />
+        <IconSegment />
+      </IconContainer>
+      <P>Add view options</P>
+    </Button>
+  );
 }
-
-export default ToggleGallery;

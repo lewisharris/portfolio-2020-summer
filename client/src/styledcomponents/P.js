@@ -9,6 +9,10 @@ const P = styled.p`
   padding: 0px;
   max-width: 700px;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 400px) {
+    padding: 0px 10px;
+  }
 `;
 
 export default P;

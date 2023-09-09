@@ -14,15 +14,25 @@ const LandingContainer = styled(animated.div)`
   width: 100vw;
 `;
 
+const SubHeading = styled(animated.div)`
+  color: #f5f5f5;
+  font-size: ${props => {
+    return props.small ? "16px" : "24px";
+  }};
+  padding-bottom: 6px;
+`;
+
 const LandingPage = () => {
   const h1Ref = useRef(null);
-  const h3Ref = useRef(null);
+  const SubHeadingRef = useRef(null);
+  const SubHeading2Ref = useRef(null);
   const buttonRef = useRef(null);
   const mouseIconRef = useRef(null);
 
   useEffect(() => {
     gsapAnim(h1Ref, 2, 0);
-    gsapAnim(h3Ref, 1.7, 0.3);
+    gsapAnim(SubHeadingRef, 2.4, 0.2);
+    gsapAnim(SubHeading2Ref, 2.4, 0.4);
     gsapAnim(buttonRef, 1.5, 0.5);
     gsapAnim(mouseIconRef, 1.3, 0.7);
   }, []);
@@ -49,9 +59,10 @@ const LandingPage = () => {
       <div>
         <Section landing>
           <H1 ref={h1Ref}>Lewis Harris</H1>
-          <H3 ref={h3Ref} light>
-            Creative Web Developer based in London,UK
-          </H3>
+          <SubHeading ref={SubHeadingRef}>Software Engineer</SubHeading>
+          <SubHeading ref={SubHeading2Ref} small>
+            London, UK
+          </SubHeading>
           <Button ref={buttonRef}>
             <a href="#projects">Explore Projects</a>
           </Button>

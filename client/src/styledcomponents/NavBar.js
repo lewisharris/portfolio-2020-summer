@@ -46,6 +46,9 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.NavRef = React.createRef();
+    this.ProjectsRef = React.createRef();
+    this.AboutRef = React.createRef();
+    this.ContactRef = React.createRef();
     this.state = {
       pullRequests: 0,
       commits: 0,
@@ -61,7 +64,7 @@ class NavBar extends React.Component {
   gsapAnim = (ref, duration, delay) => {
     gsap.from(ref.current, {
       duration: duration,
-      translateX: "5%",
+      translateX: "10%",
       opacity: 0,
       ease: "ease-in-out",
       delay: delay
@@ -78,7 +81,9 @@ class NavBar extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.getWindowSize);
     this.getWindowSize();
-    this.gsapAnim(this.NavRef, 2, 0);
+    this.gsapAnim(this.ProjectsRef, 1, 0.5);
+    this.gsapAnim(this.AboutRef, 1, 2);
+    this.gsapAnim(this.ContactRef, 1, 3);
   }
 
   componentWillUnmount() {
@@ -94,13 +99,13 @@ class NavBar extends React.Component {
               toggleTheme={this.props.toggleTheme}
               currentTheme={this.props.currentTheme}
             />
-            <Li>
+            <Li ref={this.ProjectsRef}>
               <a href="#projects">Projects</a>
             </Li>
-            <Li>
+            <Li ref={this.AboutRef}>
               <a href="#about">About</a>
             </Li>
-            <Li href="#contact">
+            <Li href="#contact" ref={this.ContactRef}>
               <a href="#contact">Contact</a>
             </Li>
           </Ul>

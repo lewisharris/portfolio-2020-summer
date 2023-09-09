@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CardButton from "./CardButton";
 
 const Container = styled.div`
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -79,13 +79,11 @@ const Card = props => {
   };
 
   return (
-    <Container displayType={props.displayType}>
+    <Container>
       <H3>{props.details.name}</H3>
       <StackText>{props.details.stack}</StackText>
       <LanguagesText>{props.details.technology}</LanguagesText>
-      {props.displayType === "Grid" ? (
-        <Img src={props.details.image} alt={props.details.image}></Img>
-      ) : null}
+      <Img src={props.details.image} alt={props.details.image}></Img>
       <MainText>{props.details.description}</MainText>
       <ButtonFlexBox>
         <CardButton color="#11C765" link={props.details.demo} type="button">

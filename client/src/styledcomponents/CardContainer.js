@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import styled from "styled-components";
 import Card from "./Card";
 import EatWellImg from "../images/eatwell-mockup.jpg";
 import PushFitImg from "../images/pushfit-mockup.jpg";
 import AlienEscapeImg from "../images/alien-escape.jpeg";
-import HolidayPickerImg from "../images/destination-somewhere.jpeg";
 import DrumKitImg from "../images/drum-kit.jpeg";
 import NutritionChecker from "../images/nutrition-checker.jpeg";
+import ToggleGallery from "./ToggleGallery";
 
 const List = [
   {
@@ -64,48 +66,61 @@ const List = [
     code: "https://github.com/lewisharris/React-Nutrition-Checker",
     design: "",
     keyId: 4
-  },
-  {
-    name: "Drum Kit",
-    technology: "Vanilla Javascript, CSS3, HTML5",
-    image: DrumKitImg,
-    description:
-      "A keypad drum kit for instant musical fun. Tap the keys to make your own beats from your keyboard. This was made using Vanilla javascript.",
-    demo: "https://lewisharris.github.io/drum-kit/",
-    code: "https://github.com/lewisharris/drum-kit",
-    design: "",
-    keyId: 5
   }
 ];
 
 const Container = styled.div`
   visibility: none;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin: 0px auto;
-  grid-template-columns: ${props => {
-    if (props.displayType === "Grid") {
-      return "repeat(auto-fill, minmax(300px, 1fr));";
-    }
-    return "auto;";
-  }};
   justify-content: center;
-  width: 90%;
   align-self: center;
 `;
 
-const CardContainer = props => {
-  const displayType = props.displayType;
+const Button = styled.button`
+  background: none;
+  border: none;
+`;
+
+const CardContainer = () => {
+  const [displaySlides, setDisplaySlides] = useState(true);
+  const handleDragStart = e => e.preventDefault();
 
   function cards() {
     const cardList = List.map(project => {
-      return (
-        <Card displayType={displayType} details={project} key={project.keyId} />
-      );
+      return <Card details={project} key={project.keyId} />;
     });
     return cardList;
   }
 
-  return <Container displayType={displayType}>{cards()}</Container>;
+  const projects = List.map(project => (
+    <Card
+      details={project}
+      key={project.keyId}
+      onDragStart={handleDragStart}
+      role="presentation"
+    />
+  ));
+
+  return (
+    <>
+      <Button onClick={() => setDisplaySlides(prev => !prev)}>
+        {`${displaySlides ? "List" : "Slide"} View`}
+      </Button>
+      {displaySlides ? (
+        <AliceCarousel
+          mouseTracking
+          items={projects}
+          autoPlay={true}
+          autoPlayInterval={3500}
+          infinite={true}
+        />
+      ) : (
+        <Container>{cards()}</Container>
+      )}
+    </>
+  );
 };
 
 export default CardContainer;

@@ -8,6 +8,7 @@ const H2 = styled.h2`
   padding: 0px;
   @media screen and (max-width: 400px) {
     font-size: 48px;
+    text-align: center;
   }
 `;
 

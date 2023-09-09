@@ -21,8 +21,9 @@ const H3 = styled.h3`
   padding: 0px;
   max-width: 500px;
 
-  @media screen {
-    font-size: 24px;
+  @media screen and (max-width: 400px) {
+    font-size: 16px;
+    text-align: center;
   }
 `;
 
