@@ -12,6 +12,7 @@
     "gsap": "^3.5.1",
     "particles.js": "^2.0.0",
     "react": "^16.13.1",
+    "react-alice-carousel": "^2.7.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.3.0",
     "react-redux": "^7.2.1",
