@@ -9,7 +9,6 @@ const H1 = styled.h1`
   margin-bottom: 10px;
   padding: 0px;
   z-index: 2;
-
   @media screen and (max-width: 368px) {
     font-size: 48px;
     text-align: center;

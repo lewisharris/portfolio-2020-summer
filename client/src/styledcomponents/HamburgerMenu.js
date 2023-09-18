@@ -6,6 +6,7 @@ import Dribbble from "../images/icons/dribbble-icon.svg";
 import LinkedIn from "../images/icons/linkedin-icon.png";
 import Logo from "../images/icons/logo-main.png";
 import Xicon from "../images/icons/X.svg";
+import CV from "../cv/lewis-harris-cv.pdf";
 
 const Menu = styled.div`
   width: 70vw;
@@ -25,7 +26,7 @@ const UL = styled.ul`
 
 const Li = styled.li`
   color: white;
-  text-decoration: ${props => {
+  text-decoration: ${(props) => {
     if (props.underlined) {
       return "underlined";
     } else {
@@ -134,7 +135,11 @@ class HamburgerMenu extends React.Component {
             </UL>
           ) : null}
 
-          <Li underlined>Digital Resume</Li>
+          <Li underlined>
+            <a href={CV} target="_blank">
+              Resume
+            </a>
+          </Li>
           <LiCircle onClick={this.props.toggle}>
             <img src={Xicon} alt="X"></img>
           </LiCircle>

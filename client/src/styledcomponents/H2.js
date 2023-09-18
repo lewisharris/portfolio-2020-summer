@@ -6,7 +6,7 @@ const H2 = styled.h2`
   font-weight: 900;
   margin: 0px;
   padding: 0px;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     font-size: 48px;
     text-align: center;
   }
