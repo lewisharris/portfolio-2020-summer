@@ -18,7 +18,7 @@ const List = [
     image: EatWellImg,
     description:
       "Calculate your daily intake of food with this full stack food tracking app. With a food API search tool, manual entry option, and custom calorie targets. Created with node and express on the back end, and React on the front end",
-    demo: "https://eat-well-food-tracker.herokuapp.com/login",
+    demo: "https://eatwell-yi7a.onrender.com/login",
     code: "https://github.com/lewisharris/Eatwell",
     design: "https://github.com/lewisharris/Eatwell/blob/master/README.md",
     keyId: 1
@@ -34,17 +34,6 @@ const List = [
     design: "https://dribbble.com/shots/14207881-Personal-Fitness-App",
     keyId: 2
   },
-  // {
-  //   name: "Workout Tracker",
-  //   technology: "React, NodeJS, GraphQL, Express, MongoDB",
-  //   image: "none",
-  //   description:
-  //     "Log into your account and keep track of your workouts for the week. With the option to add multiple workouts for each day and categorise them, you will never miss a workout again.",
-  //   demo: "link to demo",
-  //   code: "link to code",
-  //   design: "link to design",
-  //   keyId: 2
-  // },
   {
     name: "Alien Escape",
     technology: "Vanilla Javascript, Sass, CSS3 HTML5",
@@ -70,7 +59,6 @@ const List = [
 ];
 
 const Container = styled.div`
-  visibility: none;
   display: flex;
   flex-direction: column;
   margin: 0px auto;
@@ -81,6 +69,25 @@ const Container = styled.div`
 const Button = styled.button`
   background: none;
   border: none;
+`;
+
+const ViewText = styled.span`
+  margin: auto 6px;
+`;
+const ToggleDiv = styled.div`
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  align-items: center;
+  color: ${props => props.theme.darkText};
+  margin: 10px auto;
+  cursor: pointer;
+  border: solid 1px #eb706e;
+  border-radius: 5px;
+  font-size: 16px;
+  @media screen and (max-width: 368px) {
+    font-size: 12px;
+  }
 `;
 
 const CardContainer = () => {
@@ -106,7 +113,15 @@ const CardContainer = () => {
   return (
     <>
       <Button onClick={() => setDisplaySlides(prev => !prev)}>
-        {`${displaySlides ? "List" : "Slide"} View`}
+        <ToggleDiv>
+          {displaySlides ? (
+            <ion-icon name="list-outline"></ion-icon>
+          ) : (
+            <ion-icon name="tv-outline"></ion-icon>
+          )}
+
+          <ViewText>{`View ${displaySlides ? "List" : "Slides"}`}</ViewText>
+        </ToggleDiv>
       </Button>
       {displaySlides ? (
         <AliceCarousel
@@ -115,6 +130,8 @@ const CardContainer = () => {
           autoPlay={true}
           autoPlayInterval={3500}
           infinite={true}
+          disableButtonsControl
+          //NExt and prev buttons disabled in root CSS
         />
       ) : (
         <Container>{cards()}</Container>

@@ -4,9 +4,10 @@ import CardButton from "./CardButton";
 
 const Container = styled.div`
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  margin: 10px;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
+  flex-grow: 2;
   justify-content: flex-start;
   position: relative;
   background: ${props => props.theme.bg};

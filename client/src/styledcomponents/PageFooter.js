@@ -91,7 +91,7 @@ const PageFooter = () => {
           </Li>
         </Ul>
       </LinkContainer>
-      <P>Lewis Harris 2020</P>
+      <P>Lewis Harris 2023</P>
     </Footer>
   );
 };

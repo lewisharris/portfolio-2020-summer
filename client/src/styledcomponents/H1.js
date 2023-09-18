@@ -12,6 +12,7 @@ const H1 = styled.h1`
 
   @media screen and (max-width: 368px) {
     font-size: 48px;
+    text-align: center;
   }
 
   @media screen and (orientation: landscape) and (max-width: 812px) {

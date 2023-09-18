@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c18a0c74169b45b2d9ad1e3b3b63ba60",
+    "revision": "8cb0910c89af7e360974ca7b83703236",
     "url": "./index.html"
   },
   {
-    "revision": "34444258153f75cc9d3a",
+    "revision": "aadc36942e248d58910a",
+    "url": "./static/css/2.a5a05a71.chunk.css"
+  },
+  {
+    "revision": "6c408f977da68c65bda3",
     "url": "./static/css/main.af92d03d.chunk.css"
   },
   {
-    "revision": "f9a1b1da3b80fc69d2d7",
-    "url": "./static/js/2.6ec1465d.chunk.js"
+    "revision": "aadc36942e248d58910a",
+    "url": "./static/js/2.fb0df026.chunk.js"
   },
   {
-    "revision": "c87550333da8df8ab4c80bd1d6e9defb",
-    "url": "./static/js/2.6ec1465d.chunk.js.LICENSE.txt"
+    "revision": "3b4334edc04b47ef843c5eb749c33c12",
+    "url": "./static/js/2.fb0df026.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "34444258153f75cc9d3a",
-    "url": "./static/js/main.df089a65.chunk.js"
+    "revision": "6c408f977da68c65bda3",
+    "url": "./static/js/main.69d225e9.chunk.js"
   },
   {
     "revision": "d90c5b93796701d5570a",
@@ -32,10 +36,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/alien-escape.511de796.jpeg"
   },
   {
-    "revision": "8067dee9c65b2a18a4ead3759d95064f",
-    "url": "./static/media/destination-somewhere.8067dee9.jpeg"
-  },
-  {
     "revision": "e2bd4b358edf45920076cd0f60cb794d",
     "url": "./static/media/dribbble-icon.e2bd4b35.svg"
   },
@@ -44,8 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/drum-kit.12fbd688.jpeg"
   },
   {
+    "revision": "720e62ace9a6f1dac64f6483b52bd899",
+    "url": "./static/media/eatwell-mockup.720e62ac.jpg"
+  },
+  {
     "revision": "a0f10f83d164da8ab5a87d4690e9c173",
     "url": "./static/media/github-icon.a0f10f83.png"
+  },
+  {
+    "revision": "0d07dd0872087e87bccf3b93a6763c5a",
+    "url": "./static/media/lewis-harris-cv.0d07dd08.pdf"
   },
   {
     "revision": "87351787cab9ce960e77fc774f084514",

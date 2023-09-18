@@ -15,6 +15,9 @@ const Button = styled.button`
     cursor: pointer;
     border-bottom: 2px solid #ff5c59;
   }
+  @media screen and (max-width: 368px) {
+    margin: 10px auto;
+  }
 `;
 
 export default Button;

@@ -20,6 +20,9 @@ const SubHeading = styled(animated.div)`
     return props.small ? "16px" : "24px";
   }};
   padding-bottom: 6px;
+  @media screen and (max-width: 368px) {
+    text-align: center;
+  }
 `;
 
 const LandingPage = () => {

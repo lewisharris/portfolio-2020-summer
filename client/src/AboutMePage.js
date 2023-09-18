@@ -56,27 +56,27 @@ const AboutMePage = () => {
       <Section>
         <H2>About.</H2>
         <H3 light>
-          Design Engineer turned web developer with a passion for design and
-          development.
+          Software Engineer with a passion for design and development.
         </H3>
         <P weight={200}>
-          Creative web developer with proven passion for technology. I have over
-          9 years of experience within design and engineering in an agile
-          environment the automotive industry In which I have contributed to
-          engineering some of the most cutting edge and iconic automotive
-          projects of the decade. I have now migrated away from designing and
-          developing physical products and moved into technology.
+          Creative Software Engineer with proven passion for technology. I have
+          over 10 years of experience within design and engineering in start up
+          environments in the automotive industry as a CAD design engineer,
+          alongside professional experience writing software for commercial
+          companies. Throughout my journey as an engineer I have gone from
+          designing and engineering physical components to creating digital
+          products.
         </P>
         <SkillsContainer>
-          <H5 light>Front end</H5>
+          <H5 light>Front End</H5>
           <P weight={200}>
-            React, React-Native, Redux, Typescript, Javascript, Sass, CSS3,
-            HTML5
+            NextJS, React, Typescript, React-Native, Redux, GraphQL, Javascript,
+            Sass, CSS3, HTML5,
           </P>
-          <H5 light>Back end</H5>
-          <P weight={200}>GraphQL, Express, MongoDB, NodeJS</P>
-          <H5 light>Design</H5>
-          <P weight={200}>XD, Illustrator, Photoshop</P>
+          <H5 light>Back End</H5>
+          <P weight={200}>GraphQL, Apollo, Express, NoSQL, NodeJS</P>
+          <H5 light>Design and Tools</H5>
+          <P weight={200}>Git, Figma, XD, Illustrator, Photoshop</P>
           <Button>
             <A href={CV} target="_blank" light>
               View Resume
