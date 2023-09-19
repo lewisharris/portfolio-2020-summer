@@ -76,7 +76,9 @@ const AboutMePage = () => {
           <H5 light>Back End</H5>
           <P weight={200}>GraphQL, Apollo, Express, NoSQL, NodeJS</P>
           <H5 light>Design and Tools</H5>
-          <P weight={200}>Git, Figma, XD, Illustrator, Photoshop</P>
+          <P weight={200}>
+            Git, Jira, Figma, XD, Illustrator, Photoshop, Slack
+          </P>
           <Button>
             <A href={CV} target="_blank" light>
               View Resume

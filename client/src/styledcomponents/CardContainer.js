@@ -5,10 +5,8 @@ import styled from "styled-components";
 import Card from "./Card";
 import EatWellImg from "../images/eatwell-mockup.jpg";
 import PushFitImg from "../images/pushfit-mockup.jpg";
-import AlienEscapeImg from "../images/alien-escape.jpeg";
-import DrumKitImg from "../images/drum-kit.jpeg";
-import NutritionChecker from "../images/nutrition-checker.jpeg";
-import ToggleGallery from "./ToggleGallery";
+import AlienEscapeImg from "../images/alien-escape.jpg";
+import NutritionChecker from "../images/nutrition-checker.jpg";
 
 const List = [
   {
@@ -21,7 +19,7 @@ const List = [
     demo: "https://eatwell-yi7a.onrender.com/login",
     code: "https://github.com/lewisharris/Eatwell",
     design: "https://github.com/lewisharris/Eatwell/blob/master/README.md",
-    keyId: 1
+    keyId: 1,
   },
   {
     name: "PushFit",
@@ -32,7 +30,7 @@ const List = [
     demo: "https://lewisharris.github.io/pushFIT/#/",
     code: "https://github.com/lewisharris/pushFIT",
     design: "https://dribbble.com/shots/14207881-Personal-Fitness-App",
-    keyId: 2
+    keyId: 2,
   },
   {
     name: "Alien Escape",
@@ -43,7 +41,7 @@ const List = [
     demo: "https://lewisharris.github.io/alien-escape/",
     code: "https://github.com/lewisharris/alien-escape",
     design: "",
-    keyId: 3
+    keyId: 3,
   },
   {
     name: "Nutrition Checker",
@@ -54,8 +52,8 @@ const List = [
     demo: "https://lewisharris.github.io/React-Nutrition-Checker/",
     code: "https://github.com/lewisharris/React-Nutrition-Checker",
     design: "",
-    keyId: 4
-  }
+    keyId: 4,
+  },
 ];
 
 const Container = styled.div`
@@ -79,7 +77,7 @@ const ToggleDiv = styled.div`
   padding: 5px;
   flex-direction: row;
   align-items: center;
-  color: ${props => props.theme.darkText};
+  color: ${(props) => props.theme.darkText};
   margin: 10px auto;
   cursor: pointer;
   border: solid 1px #eb706e;
@@ -92,16 +90,16 @@ const ToggleDiv = styled.div`
 
 const CardContainer = () => {
   const [displaySlides, setDisplaySlides] = useState(true);
-  const handleDragStart = e => e.preventDefault();
+  const handleDragStart = (e) => e.preventDefault();
 
   function cards() {
-    const cardList = List.map(project => {
+    const cardList = List.map((project) => {
       return <Card details={project} key={project.keyId} />;
     });
     return cardList;
   }
 
-  const projects = List.map(project => (
+  const projects = List.map((project) => (
     <Card
       details={project}
       key={project.keyId}
@@ -112,7 +110,7 @@ const CardContainer = () => {
 
   return (
     <>
-      <Button onClick={() => setDisplaySlides(prev => !prev)}>
+      <Button onClick={() => setDisplaySlides((prev) => !prev)}>
         <ToggleDiv>
           {displaySlides ? (
             <ion-icon name="list-outline"></ion-icon>
