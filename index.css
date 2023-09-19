@@ -5,3 +5,16 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+.alice-carousel__prev-btn {
+  visibility: hidden;
+}
+.alice-carousel__prev-btn-item {
+  visibility: hidden;
+}
+.alice-carousel__next-btn {
+  visibility: hidden;
+}
+.alice-carousel__next-btn-item {
+  visibility: hidden;
+}
