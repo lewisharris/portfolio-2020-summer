@@ -16,7 +16,7 @@ const List = [
     image: EatWellImg,
     description:
       "Calculate your daily intake of food with this full stack food tracking app. With a food API search tool, manual entry option, and custom calorie targets. Created with node and express on the back end, and React on the front end",
-    demo: "https://eatwell-yi7a.onrender.com/login",
+    demo: "https://eatwell-yi7a.onrender.com",
     code: "https://github.com/lewisharris/Eatwell",
     design: "https://github.com/lewisharris/Eatwell/blob/master/README.md",
     keyId: 1,
