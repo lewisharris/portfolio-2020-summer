@@ -59,8 +59,8 @@ const AboutMePage = () => {
           Software Engineer with a passion for design and development.
         </H3>
         <P weight={200}>
-          Creative Software Engineer with proven passion for technology. I have
-          over 10 years of experience within design and engineering in start up
+          Creative Software Engineer with a passion for technology. I have over
+          10 years of experience within design and engineering in start up
           environments in the automotive industry as a CAD design engineer,
           alongside professional experience writing software for commercial
           companies. Throughout my journey as an engineer I have gone from
@@ -70,18 +70,23 @@ const AboutMePage = () => {
         <SkillsContainer>
           <H5 light>Front End</H5>
           <P weight={200}>
-            NextJS, React, Typescript, React-Native, Redux, GraphQL, Javascript,
-            Sass, CSS3, HTML5,
+            NextJS, React, Typescript, React-Native, Redux, GraphQL, Javascript
           </P>
           <H5 light>Back End</H5>
-          <P weight={200}>GraphQL, Apollo, Express, NoSQL, NodeJS</P>
+          <P weight={200}>
+            GraphQL, Apollo, NodeJS, Express, Prisma, Sql, NoSql
+          </P>
           <H5 light>Design and Tools</H5>
           <P weight={200}>
-            Git, Jira, Figma, XD, Illustrator, Photoshop, Slack
+            Git, Jira, Slack, Figma, XD, Illustrator, Photoshop
           </P>
           <Button>
-            <A href={CV} target="_blank" light>
-              View Resume
+            <A
+              href="https://www.linkedin.com/in/lewis-harris/"
+              target="_blank"
+              light
+            >
+              Go to LinkedIn
             </A>
           </Button>
         </SkillsContainer>
